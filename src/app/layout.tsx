@@ -81,7 +81,7 @@ export default function RootLayout({
             <div className="flex items-center gap-2 sm:gap-3">
               <a
                 href="tel:+525551054340"
-                className="hidden xl:inline-flex items-center whitespace-nowrap text-sm font-semibold text-neutral-900 transition hover:text-blue-700"
+                className="inline-flex items-center whitespace-nowrap text-sm font-semibold text-neutral-900 transition hover:text-blue-700"
               >
                 55 5105 4340
               </a>
