@@ -235,6 +235,43 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-20 px-6 bg-neutral-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-[32px] border border-neutral-200 bg-white p-8 md:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
+                Guías de construcción
+              </p>
+              <h2 className="mt-4 text-3xl md:text-4xl font-bold tracking-tight text-neutral-950">
+                Costos, ideas y planificación para remodelar mejor
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-neutral-600">
+                Explora guías pensadas para ayudarte a entender costos, materiales, alcances y decisiones clave antes de iniciar una remodelación en CDMX y Estado de México.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              <a href="/blog/costo-remodelar-cocina-cdmx" className="rounded-2xl border border-neutral-200 p-5 transition hover:-translate-y-1 hover:shadow-md">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">Costo</p>
+                <h3 className="mt-3 text-xl font-semibold text-neutral-950">Cuánto cuesta remodelar una cocina en CDMX</h3>
+                <p className="mt-3 text-sm leading-6 text-neutral-600">Factores, materiales y decisiones que influyen en el presupuesto.</p>
+              </a>
+
+              <a href="/remodelacion-residencial/cocina" className="rounded-2xl border border-neutral-200 p-5 transition hover:-translate-y-1 hover:shadow-md">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">Servicio</p>
+                <h3 className="mt-3 text-xl font-semibold text-neutral-950">Remodelación de cocina</h3>
+                <p className="mt-3 text-sm leading-6 text-neutral-600">Diseño, ejecución y control de obra para cocinas funcionales y duraderas.</p>
+              </a>
+
+              <a href="/blog" className="rounded-2xl border border-neutral-200 bg-neutral-900 p-5 text-white transition hover:-translate-y-1 hover:shadow-md">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">Explorar</p>
+                <h3 className="mt-3 text-xl font-semibold">Ver todas las guías</h3>
+                <p className="mt-3 text-sm leading-6 text-white/80">Consulta artículos sobre costos, planeación, materiales y remodelación.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="py-20 px-6 reveal">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
           <div className="rounded-xl border border-gray-200 p-6">
