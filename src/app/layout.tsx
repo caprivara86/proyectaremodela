@@ -3,11 +3,11 @@ import Image from "next/image";
 import MobileMenu from "../components/MobileMenu";
 
 const WHATSAPP_PHONE = "525551054340";
-const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotizaciÃƒÂ³n para una remodelaciÃƒÂ³n. Ã‚Â¿Me pueden apoyar?");
+const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotizaciÃƒÆ’Ã‚Â³n para una remodelaciÃƒÆ’Ã‚Â³n. Ãƒâ€šÃ‚Â¿Me pueden apoyar?");
 
 export const metadata = {
-  title: "Proyecta RemodelaciÃ³n",
-  description: "RemodelaciÃ³n integral residencial y corporativa en CDMX y Estado de MÃ©xico.",
+  title: "Proyecta RemodelaciÃƒÂ³n",
+  description: "RemodelaciÃƒÂ³n integral residencial y corporativa en CDMX y Estado de MÃƒÂ©xico.",
   icons: {
     icon: [
       { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
@@ -54,7 +54,7 @@ export default function RootLayout({
               <MobileMenu />
               <a
                 href="tel:+525551054340"
-                className="hidden lg:inline-flex items-center text-sm font-semibold text-gray-900 hover:text-blue-700 transition"
+                className="inline-flex items-center text-sm font-semibold text-gray-900 hover:text-blue-700 transition"
               >
                 55 5105 4340
               </a>
