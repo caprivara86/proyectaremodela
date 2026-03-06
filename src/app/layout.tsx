@@ -7,6 +7,7 @@ const WHATSAPP_PHONE = "525551054340";
 const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotización para una remodelación. ¿Me pueden apoyar?");
 
 export const metadata = {
+  metadataBase: new URL("https://www.proyectaremodela.com"),
   title: "Proyecta Remodelación | Construcción Inteligente",
   description: "Remodelación integral residencial y corporativa en CDMX y Estado de México.",
   icons: {
