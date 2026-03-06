@@ -3,10 +3,10 @@ import Image from "next/image";
 import MobileMenu from "../components/MobileMenu";
 
 const WHATSAPP_PHONE = "525551054340";
-const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotizaciÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³n para una remodelaciÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³n. ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Me pueden apoyar?");
+const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotizaciÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³n para una remodelaciÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³n. ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Me pueden apoyar?");
 
 export const metadata = {
-  title: "Proyecta Remodelación | Construcción Inteligente en CDMX",
+  title: "Proyecta Remodelación | Construcción Inteligente",
   description: "Remodelación integral residencial y corporativa en CDMX y Estado de México.",
   icons: {
     icon: [
@@ -18,7 +18,7 @@ export const metadata = {
     ],
   },
   openGraph: {
-    title: "Proyecta Remodelación | Construcción Inteligente en CDMX",
+    title: "Proyecta Remodelación | Construcción Inteligente",
     description: "Remodelación integral residencial y corporativa en CDMX y Estado de México.",
     url: "https://www.proyectaremodela.com",
     siteName: "Proyecta Remodelación",
@@ -35,7 +35,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Proyecta Remodelación | Construcción Inteligente en CDMX",
+    title: "Proyecta Remodelación | Construcción Inteligente",
     description: "Remodelación integral residencial y corporativa en CDMX y Estado de México.",
     images: ["/projects/logo/proyecta_logo_alta_res_4000w.png"],
   },
