@@ -54,7 +54,7 @@ export default function RootLayout({
               <MobileMenu />
               <a
                 href="tel:+525551054340"
-                className="inline-flex items-center text-sm font-semibold text-gray-900 hover:text-blue-700 transition"
+                className="inline-flex items-center text-sm font-semibold text-gray-900 hover:text-blue-700 transition whitespace-nowrap"
               >
                 55 5105 4340
               </a>
@@ -92,4 +92,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 
