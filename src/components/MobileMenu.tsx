@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 
@@ -29,7 +29,7 @@ export default function MobileMenu() {
       </button>
 
       {open && (
-        <div className="absolute left-0 top-[calc(100%+12px)] z-50 w-[320px] max-w-[85vw] rounded-[2rem] bg-white p-8 shadow-2xl border border-gray-200">
+        <div className="fixed right-4 top-24 z-50 w-[min(320px,calc(100vw-2rem))] rounded-[2rem] border border-gray-200 bg-white p-8 shadow-2xl">
           <nav className="flex flex-col gap-6">
             {links.map((link) => (
               <a
