@@ -3,11 +3,11 @@ import Image from "next/image";
 import MobileMenu from "../components/MobileMenu";
 
 const WHATSAPP_PHONE = "525551054340";
-const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotizaciÃ³n para una remodelaciÃ³n. Â¿Me pueden apoyar?");
+const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotizaciÃƒÂ³n para una remodelaciÃƒÂ³n. Ã‚Â¿Me pueden apoyar?");
 
 export const metadata = {
-  title: "Proyecta Remodelación",
-  description: "Remodelación integral residencial y corporativa en CDMX y Estado de México.",
+  title: "Proyecta RemodelaciÃ³n",
+  description: "RemodelaciÃ³n integral residencial y corporativa en CDMX y Estado de MÃ©xico.",
   icons: {
     icon: [
       { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
@@ -52,6 +52,12 @@ export default function RootLayout({
 
             <div className="flex items-center gap-3">
               <MobileMenu />
+              <a
+                href="tel:+525551054340"
+                className="hidden lg:inline-flex items-center text-sm font-semibold text-gray-900 hover:text-blue-700 transition"
+              >
+                55 5105 4340
+              </a>
               <a
                 href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}
                 target="_blank"
