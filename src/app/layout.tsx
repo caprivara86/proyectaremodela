@@ -68,6 +68,9 @@ export default function RootLayout({
 
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
               <a href="/servicios" className="hover:text-gray-900 transition">Servicios</a>
+              <a href="/remodelacion-residencial" className="hover:text-gray-900 transition">Remodelación residencial</a>
+              <a href="/remodelacion-comercial" className="hover:text-gray-900 transition">Remodelación comercial</a>
+              <a href="/remodelacion-corporativa" className="hover:text-gray-900 transition">Remodelación corporativa</a>
               <a href="/proyectos" className="hover:text-gray-900 transition">Proyectos</a>
               <a href="/por-que" className="hover:text-gray-900 transition">Valor agregado</a>
               <a href="/contacto" className="hover:text-gray-900 transition">Contacto</a>
@@ -104,50 +107,48 @@ export default function RootLayout({
         </div>
 
         <footer className="border-t border-gray-200 bg-gray-50 mt-24">
-  <div className="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10 text-sm text-gray-600">
+          <div className="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10 text-sm text-gray-600">
+            <div className="space-y-4">
+              <Image
+                src="/projects/logo/proyecta_logo_alta_res_4000w.png"
+                alt="Proyecta Remodelación"
+                width={160}
+                height={40}
+              />
+              <p className="text-gray-600 leading-relaxed">
+                Remodelación integral residencial, comercial y corporativa en CDMX y Estado de México.
+              </p>
+            </div>
 
-    <div className="space-y-4">
-      <Image
-        src="/projects/logo/proyecta_logo_alta_res_4000w.png"
-        alt="Proyecta Remodelación"
-        width={160}
-        height={40}
-      />
-      <p className="text-gray-600 leading-relaxed">
-        Remodelación integral residencial, comercial y corporativa en CDMX y Estado de México.
-      </p>
-    </div>
+            <div className="space-y-3">
+              <h3 className="font-semibold text-gray-900">Contacto</h3>
+              <p>CDMX y Estado de México</p>
+              <a href="tel:+525551054340" className="hover:text-gray-900 transition">
+                55 5105 4340
+              </a>
+              <a href="mailto:contacto@proyectaremodela.com" className="block hover:text-gray-900 transition">
+                contacto@proyectaremodela.com
+              </a>
+            </div>
 
-    <div className="space-y-3">
-      <h3 className="font-semibold text-gray-900">Contacto</h3>
-      <p>CDMX y Estado de México</p>
-      <a href="tel:+525551054340" className="hover:text-gray-900 transition">
-        55 5105 4340
-      </a>
-      <a href="mailto:contacto@proyectaremodela.com" className="block hover:text-gray-900 transition">
-        contacto@proyectaremodela.com
-      </a>
-    </div>
+            <div className="space-y-3">
+              <h3 className="font-semibold text-gray-900">Legal</h3>
+              <a href="/privacidad" className="block hover:text-gray-900 transition">
+                Aviso de privacidad
+              </a>
+              <a href="https://wa.me/525551054340" target="_blank" rel="noopener noreferrer" className="block hover:text-gray-900 transition">
+                WhatsApp
+              </a>
+            </div>
+          </div>
 
-    <div className="space-y-3">
-      <h3 className="font-semibold text-gray-900">Legal</h3>
-      <a href="/privacidad" className="block hover:text-gray-900 transition">
-        Aviso de privacidad
-      </a>
-      <a href="https://wa.me/525551054340" target="_blank" rel="noopener noreferrer" className="block hover:text-gray-900 transition">
-        WhatsApp
-      </a>
-    </div>
-
-  </div>
-
-  <div className="border-t border-gray-200">
-    <div className="max-w-6xl mx-auto px-6 py-6 text-xs text-gray-500 flex flex-col md:flex-row items-center justify-between gap-3">
-      <span>© 2026 Proyecta Remodelación y Mantenimiento</span>
-      <span>Construcción Inteligente</span>
-    </div>
-  </div>
-</footer>
+          <div className="border-t border-gray-200">
+            <div className="max-w-6xl mx-auto px-6 py-6 text-xs text-gray-500 flex flex-col md:flex-row items-center justify-between gap-3">
+              <span>© 2026 Proyecta Remodelación y Mantenimiento</span>
+              <span>Construcción Inteligente</span>
+            </div>
+          </div>
+        </footer>
 
         <a
           href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}

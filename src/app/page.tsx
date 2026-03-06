@@ -201,6 +201,40 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Nuestros servicios de remodelación
+          </h2>
+          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+            Ejecutamos proyectos residenciales, comerciales y corporativos en CDMX y Estado de México.
+          </p>
+
+          <div className="mt-12 grid md:grid-cols-3 gap-6 text-left">
+            <a href="/remodelacion-residencial" className="block rounded-xl border border-gray-200 p-6 hover:shadow-md transition">
+              <h3 className="text-xl font-semibold">Remodelación residencial</h3>
+              <p className="mt-3 text-gray-600">
+                Remodelación de casas, departamentos y residencias con acabados premium.
+              </p>
+            </a>
+
+            <a href="/remodelacion-comercial" className="block rounded-xl border border-gray-200 p-6 hover:shadow-md transition">
+              <h3 className="text-xl font-semibold">Remodelación comercial</h3>
+              <p className="mt-3 text-gray-600">
+                Adecuación de locales, restaurantes, franquicias y espacios de atención al cliente.
+              </p>
+            </a>
+
+            <a href="/remodelacion-corporativa" className="block rounded-xl border border-gray-200 p-6 hover:shadow-md transition">
+              <h3 className="text-xl font-semibold">Remodelación corporativa</h3>
+              <p className="mt-3 text-gray-600">
+                Adecuación de oficinas y espacios empresariales con control de proyecto.
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 px-6 reveal">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
           <div className="rounded-xl border border-gray-200 p-6">
