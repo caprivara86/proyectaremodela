@@ -9,21 +9,21 @@ const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotización para una 
 const slides = [
   {
     image: "/projects/residenciales/residencial1.jpeg",
-    title: "Remodelación Residencial Premium",
+    title: "Remodelación integral en CDMX y Estado de México con control, calidad y cumplimiento",
     description:
-      "Transformamos viviendas de nivel medio y alto con ejecución profesional y acabados de alto estándar.",
+      "Ejecutamos proyectos residenciales, comerciales y corporativos en CDMX y Estado de México, con metodología profesional, supervisión puntual y acabados de alto estándar.",
   },
   {
     image: "/projects/corporativas/bridgestone1.jpeg",
-    title: "Ejecución Comercial y Retail",
+    title: "Ejecución comercial y retail bajo estándares de marca",
     description:
-      "Adecuaciones para franquicias y negocios bajo lineamientos de marca y control presupuestal.",
+      "Adecuaciones para franquicias y negocios con control presupuestal, calidad en acabados y cumplimiento operativo.",
   },
   {
     image: "/projects/corporativas/areadetrabajo.jpg",
-    title: "Adecuaciones Corporativas con Control Financiero",
+    title: "Proyectos corporativos con metodología estructurada",
     description:
-      "Proyectos empresariales con metodología estructurada y cumplimiento de cronogramas.",
+      "Desarrollamos adecuaciones empresariales con enfoque en tiempos, presupuesto, supervisión y resultados duraderos.",
   },
 ];
 
@@ -94,7 +94,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
       <section
-        className="relative h-[75vh] flex items-center overflow-hidden"
+        className="relative min-h-[88vh] flex items-center overflow-hidden"
         onMouseEnter={() => {
           isPausedRef.current = true;
         }}
@@ -117,39 +117,60 @@ export default function Home() {
               priority={index === 0}
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-black/60" />
+            <div className="absolute inset-0 bg-black/65" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/25" />
           </div>
         ))}
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 text-white">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            {slides[current].title}
-          </h1>
-          <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-3xl">
-            {slides[current].description}
-          </p>
+        <div className="relative z-10 max-w-6xl mx-auto w-full px-6">
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs md:text-sm font-medium text-white/90 backdrop-blur-sm">
+              CDMX y Estado de México · Proyectos residenciales, comerciales y corporativos
+            </div>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <a
-              href="/contacto"
-              className="inline-flex justify-center bg-blue-700 hover:bg-blue-800 transition px-6 py-3 rounded-md text-white font-semibold"
-            >
-              Solicitar Cotización
-            </a>
-            <a
-              href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex justify-center border border-white/40 hover:bg-white/10 transition px-6 py-3 rounded-md text-white font-semibold"
-            >
-              WhatsApp
-            </a>
+            <h1 className="mt-6 text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-white">
+              {slides[current].title}
+            </h1>
+
+            <p className="mt-6 max-w-3xl text-lg md:text-xl leading-relaxed text-gray-200">
+              {slides[current].description}
+            </p>
+
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <a
+                href="/contacto"
+                className="inline-flex justify-center items-center rounded-xl bg-blue-700 px-7 py-3.5 text-white font-semibold shadow-lg shadow-blue-900/20 transition hover:bg-blue-800"
+              >
+                Solicitar cotización
+              </a>
+              <a
+                href="/proyectos"
+                className="inline-flex justify-center items-center rounded-xl border border-white/25 bg-white/10 px-7 py-3.5 text-white font-semibold backdrop-blur-sm transition hover:bg-white/15"
+              >
+                Ver proyectos
+              </a>
+            </div>
+
+            <div className="mt-10 grid gap-4 sm:grid-cols-3">
+              <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm">
+                <div className="text-2xl font-bold text-white">300+</div>
+                <p className="mt-1 text-sm text-gray-200">Proyectos ejecutados</p>
+              </div>
+              <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm">
+                <div className="text-2xl font-bold text-white">85+</div>
+                <p className="mt-1 text-sm text-gray-200">Clientes satisfechos</p>
+              </div>
+              <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm">
+                <div className="text-2xl font-bold text-white">2010–2026</div>
+                <p className="mt-1 text-sm text-gray-200">Experiencia acumulada en ejecución y remodelación</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <button
           onClick={prevSlide}
-          className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white h-10 w-10 rounded-full flex items-center justify-center"
+          className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 bg-black/35 hover:bg-black/55 text-white h-11 w-11 rounded-full flex items-center justify-center backdrop-blur-sm transition"
           aria-label="Anterior"
         >
           ‹
@@ -157,7 +178,7 @@ export default function Home() {
 
         <button
           onClick={nextSlide}
-          className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white h-10 w-10 rounded-full flex items-center justify-center"
+          className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 bg-black/35 hover:bg-black/55 text-white h-11 w-11 rounded-full flex items-center justify-center backdrop-blur-sm transition"
           aria-label="Siguiente"
         >
           ›
@@ -172,8 +193,8 @@ export default function Home() {
                 resetTimer();
                 setCurrent(i);
               }}
-              className={`h-2.5 w-2.5 rounded-full transition ${
-                i === current ? "bg-white" : "bg-white/40"
+              className={`h-2.5 w-8 rounded-full transition ${
+                i === current ? "bg-white" : "bg-white/35"
               }`}
             />
           ))}
@@ -198,6 +219,30 @@ export default function Home() {
             <h3 className="text-xl font-semibold">Cumplimiento Real</h3>
             <p className="mt-3 text-gray-600">
               Entregas en tiempo y comunicación transparente.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-white reveal">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            Empresa de remodelación integral en CDMX y Estado de México
+          </h2>
+          <div className="mt-6 space-y-5 text-lg leading-8 text-gray-600">
+            <p>
+              En Proyecta Remodelación y Mantenimiento desarrollamos proyectos de remodelación integral
+              para espacios residenciales, comerciales y corporativos, con atención en CDMX y Estado de México.
+              Nuestro enfoque combina planeación, control de presupuesto, supervisión de obra y acabados de alto estándar.
+            </p>
+            <p>
+              Ejecutamos remodelaciones de casas, departamentos, oficinas, locales comerciales, franquicias
+              y adecuaciones corporativas, adaptándonos a los objetivos operativos, funcionales y estéticos de cada cliente.
+            </p>
+            <p>
+              Si buscas una empresa de remodelación en CDMX o Estado de México con experiencia real,
+              metodología de ejecución y cumplimiento de tiempos, en Proyecta te ayudamos a transformar
+              tu espacio con control, calidad y atención profesional.
             </p>
           </div>
         </div>
