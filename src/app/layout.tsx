@@ -2,13 +2,13 @@ import "./globals.css";
 import Image from "next/image";
 
 const WHATSAPP_PHONE = "525551054340";
-const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotización para una Remodelación. ¿Me pueden apoyar?");
+const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotizaciÃ³n para una RemodelaciÃ³n. Â¿Me pueden apoyar?");
 
 export const metadata = {
-  title: "Proyecta Remodelación",
-  description: "Remodelación integral residencial y corporativa en CDMX y Estado de México.",
+  title: "Proyecta RemodelaciÃ³n",
+  description: "RemodelaciÃ³n integral residencial y corporativa en CDMX y Estado de MÃ©xico.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.jpg",
   },
 };
 
