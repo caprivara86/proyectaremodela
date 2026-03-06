@@ -2,11 +2,11 @@ import "./globals.css";
 import Image from "next/image";
 
 const WHATSAPP_PHONE = "525551054340";
-const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotizaciÃ³n para una RemodelaciÃ³n. Â¿Me pueden apoyar?");
+const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotizaciÃƒÂ³n para una RemodelaciÃƒÂ³n. Ã‚Â¿Me pueden apoyar?");
 
 export const metadata = {
-  title: "Proyecta RemodelaciÃ³n",
-  description: "RemodelaciÃ³n integral residencial y corporativa en CDMX y Estado de MÃ©xico.",
+  title: "Proyecta RemodelaciÃƒÂ³n",
+  description: "RemodelaciÃƒÂ³n integral residencial y corporativa en CDMX y Estado de MÃƒÂ©xico.",
   icons: {
     icon: "/icon.jpg",
   },
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    <html lang="es">`r`n      <head>`r`n        <link rel="icon" href="/icon.jpg" />`r`n      </head>
       <body className="bg-white text-gray-900 antialiased tracking-tight">
 
         <header className="fixed top-0 inset-x-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md shadow-sm">
