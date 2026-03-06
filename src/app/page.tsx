@@ -4,26 +4,26 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const WHATSAPP_PHONE = "525551054340";
-const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotización para una remodelación. ¿Me pueden apoyar?");
+const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotizaciÃƒÂ³n para una remodelaciÃƒÂ³n. Ã‚Â¿Me pueden apoyar?");
 
 const slides = [
   {
     image: "/projects/residenciales/residencial1.jpeg",
-    title: "Remodelación Residencial Premium",
+    title: "RemodelaciÃƒÂ³n Residencial Premium",
     description:
-      "Transformamos viviendas de nivel medio y alto con ejecución profesional y acabados de alto estándar.",
+      "Transformamos viviendas de nivel medio y alto con ejecuciÃƒÂ³n profesional y acabados de alto estÃƒÂ¡ndar.",
   },
   {
     image: "/projects/corporativas/bridgestone1.jpeg",
-    title: "Ejecución Comercial y Retail",
+    title: "EjecuciÃƒÂ³n Comercial y Retail",
     description:
       "Adecuaciones para franquicias y negocios bajo lineamientos de marca y control presupuestal.",
   },
   {
-    image: "/projects/residenciales/residencialhabitacion1.jpeg",
+    image: "/projects/corporativas/areadetrabajo.jpg",
     title: "Adecuaciones Corporativas con Control Financiero",
     description:
-      "Proyectos empresariales con metodología estructurada y cumplimiento de cronogramas.",
+      "Proyectos empresariales con metodologÃƒÂ­a estructurada y cumplimiento de cronogramas.",
   },
 ];
 
@@ -136,7 +136,7 @@ export default function Home() {
               href="/contacto"
               className="inline-flex justify-center bg-blue-700 hover:bg-blue-800 transition px-6 py-3 rounded-md text-white font-semibold"
             >
-              Solicitar Cotización
+              Solicitar CotizaciÃƒÂ³n
             </a>
             <a
               href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}
@@ -154,7 +154,7 @@ export default function Home() {
           className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white h-10 w-10 rounded-full flex items-center justify-center"
           aria-label="Anterior"
         >
-          ‹
+          Ã¢â‚¬Â¹
         </button>
 
         <button
@@ -162,7 +162,7 @@ export default function Home() {
           className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white h-10 w-10 rounded-full flex items-center justify-center"
           aria-label="Siguiente"
         >
-          ›
+          Ã¢â‚¬Âº
         </button>
 
         <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-20">
@@ -194,13 +194,13 @@ export default function Home() {
           <div className="rounded-xl border border-gray-200 p-6">
             <h3 className="text-xl font-semibold">Control Financiero</h3>
             <p className="mt-3 text-gray-600">
-              Metodología estructurada y cumplimiento de presupuesto.
+              MetodologÃƒÂ­a estructurada y cumplimiento de presupuesto.
             </p>
           </div>
           <div className="rounded-xl border border-gray-200 p-6">
             <h3 className="text-xl font-semibold">Cumplimiento Real</h3>
             <p className="mt-3 text-gray-600">
-              Entregas en tiempo y comunicación transparente.
+              Entregas en tiempo y comunicaciÃƒÂ³n transparente.
             </p>
           </div>
         </div>
@@ -213,8 +213,8 @@ export default function Home() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold">Nuestro Book</h2>
               <p className="mt-4 text-gray-600 max-w-2xl">
-                Cada proyecto es único. Ejecutamos remodelaciones y adecuaciones con control, metodología
-                y estándares de marca, desde residencial hasta corporativo.
+                Cada proyecto es ÃƒÂºnico. Ejecutamos remodelaciones y adecuaciones con control, metodologÃƒÂ­a
+                y estÃƒÂ¡ndares de marca, desde residencial hasta corporativo.
               </p>
             </div>
             <a
@@ -229,7 +229,7 @@ export default function Home() {
             {[
               { t: "Residenciales", img: "/projects/residenciales/residencial1.jpeg" },
               { t: "Restaurantes", img: "/projects/restaurantes/restaurante2.jpeg" },
-              { t: "Temáticos", img: "/projects/proyectos-especiales/bingo1.jpeg" },
+              { t: "TemÃƒÂ¡ticos", img: "/projects/proyectos-especiales/bingo1.jpeg" },
               { t: "Corporativo", img: "/projects/corporativas/corporativo2.jpeg" },
               { t: "Automotriz", img: "/projects/corporativas/bridgestone1.jpeg" },
               { t: "Casinos", img: "/projects/casinos/casino1.jpeg" },
@@ -252,7 +252,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AUTORIDAD / MÉTRICAS */}
+      {/* AUTORIDAD / MÃƒâ€°TRICAS */}
       <section className="bg-neutral-950 text-white py-24 px-6 reveal">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold">
@@ -278,12 +278,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trayectoria con empresas líderes */}
+      {/* Trayectoria con empresas lÃƒÂ­deres */}
       <section className="bg-neutral-950 text-white pb-24 px-6 reveal">
         <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-2xl md:text-3xl font-semibold">Trayectoria con empresas líderes</h3>
+          <h3 className="text-2xl md:text-3xl font-semibold">Trayectoria con empresas lÃƒÂ­deres</h3>
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-            Marcas y empresas que han confiado en nuestra ejecución, control y estándares.
+            Marcas y empresas que han confiado en nuestra ejecuciÃƒÂ³n, control y estÃƒÂ¡ndares.
           </p>
 
           <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center opacity-90">
@@ -298,21 +298,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SEGMENTACIÓN */}
+      {/* SEGMENTACIÃƒâ€œN */}
       <section className="bg-gray-50 py-24 px-6 reveal">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold">
-            ¿Qué tipo de proyecto deseas desarrollar?
+            Ã‚Â¿QuÃƒÂ© tipo de proyecto deseas desarrollar?
           </h2>
           <p className="mt-4 text-gray-600">
-            Contamos con experiencia tanto en remodelación residencial como en ejecución corporativa.
+            Contamos con experiencia tanto en remodelaciÃƒÂ³n residencial como en ejecuciÃƒÂ³n corporativa.
           </p>
 
           <div className="mt-12 grid md:grid-cols-2 gap-8">
             <div className="border rounded-xl p-10 bg-white shadow-sm">
               <h3 className="text-2xl font-semibold">Proyecto Residencial</h3>
               <p className="mt-4 text-gray-600">
-                Remodelación integral para viviendas de nivel medio y alto, con acabados premium y supervisión profesional.
+                RemodelaciÃƒÂ³n integral para viviendas de nivel medio y alto, con acabados premium y supervisiÃƒÂ³n profesional.
               </p>
               <div className="mt-6">
                 <a
@@ -327,7 +327,7 @@ export default function Home() {
             <div className="border rounded-xl p-10 bg-white shadow-sm">
               <h3 className="text-2xl font-semibold">Proyecto Comercial / Corporativo</h3>
               <p className="mt-4 text-gray-600">
-                Ejecución bajo lineamientos de marca, control presupuestal y cumplimiento de cronogramas corporativos.
+                EjecuciÃƒÂ³n bajo lineamientos de marca, control presupuestal y cumplimiento de cronogramas corporativos.
               </p>
               <div className="mt-6">
                 <a
@@ -342,11 +342,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTACTO RÁPIDO */}
+      {/* CONTACTO RÃƒÂPIDO */}
       <section id="contacto" className="bg-gray-100 py-20 px-6 reveal">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold">Contáctanos</h2>
-          <p className="mt-4 text-gray-600">CDMX y Estado de México</p>
+          <h2 className="text-3xl font-bold">ContÃƒÂ¡ctanos</h2>
+          <p className="mt-4 text-gray-600">CDMX y Estado de MÃƒÂ©xico</p>
           <p className="mt-2 font-semibold">55 5105 4340</p>
           <div className="mt-6">
             <a
