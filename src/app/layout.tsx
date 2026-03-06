@@ -54,51 +54,55 @@ export default function RootLayout({
         <link rel="icon" href="/icon.jpg" />
       </head>
       <body className="bg-white text-gray-900 antialiased tracking-tight">
-        <header className="fixed top-0 inset-x-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md shadow-sm">
-          <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="/" className="font-semibold tracking-wide text-white">
+                <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[rgba(255,255,255,0.82)] shadow-[0_10px_40px_rgba(15,23,42,0.08)] backdrop-blur-xl">
+          <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6">
+            <a href="/" className="flex min-w-0 items-center">
               <Image
                 src="/projects/logo/proyecta_logo_alta_res_4000w.png"
                 alt="Proyecta Remodela"
-                width={180}
+                width={176}
                 height={44}
                 priority
+                className="h-auto w-[140px] sm:w-[160px] md:w-[176px]"
               />
               <span className="sr-only">Proyecta</span>
             </a>
 
-            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
-              <a href="/servicios" className="hover:text-gray-900 transition">Servicios</a>
-              <a href="/remodelacion-residencial" className="hover:text-gray-900 transition">Remodelación residencial</a>
-              <a href="/remodelacion-comercial" className="hover:text-gray-900 transition">Remodelación comercial</a>
-              <a href="/remodelacion-corporativa" className="hover:text-gray-900 transition">Remodelación corporativa</a>
-              <a href="/proyectos" className="hover:text-gray-900 transition">Proyectos</a>
-              <a href="/por-que" className="hover:text-gray-900 transition">Valor agregado</a>
-              <a href="/contacto" className="hover:text-gray-900 transition">Contacto</a>
+            <nav className="hidden lg:flex items-center gap-5 text-sm font-medium text-neutral-700">
+              <a href="/servicios" className="transition hover:text-neutral-950">Servicios</a>
+              <a href="/remodelacion-residencial" className="transition hover:text-neutral-950">Residencial</a>
+              <a href="/remodelacion-comercial" className="transition hover:text-neutral-950">Comercial</a>
+              <a href="/remodelacion-corporativa" className="transition hover:text-neutral-950">Corporativa</a>
+              <a href="/proyectos" className="transition hover:text-neutral-950">Proyectos</a>
+              <a href="/por-que" className="transition hover:text-neutral-950">Valor agregado</a>
+              <a href="/contacto" className="transition hover:text-neutral-950">Contacto</a>
             </nav>
 
-            <div className="flex items-center gap-3">
-              <MobileMenu />
+            <div className="flex items-center gap-2 sm:gap-3">
               <a
                 href="tel:+525551054340"
-                className="inline-flex items-center text-sm font-semibold text-gray-900 hover:text-blue-700 transition whitespace-nowrap"
+                className="hidden xl:inline-flex items-center whitespace-nowrap text-sm font-semibold text-neutral-900 transition hover:text-blue-700"
               >
                 55 5105 4340
               </a>
+
               <a
                 href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center rounded-md border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50 transition"
+                className="hidden md:inline-flex items-center rounded-full border border-neutral-300 px-4 py-2 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-50"
               >
                 WhatsApp
               </a>
+
               <a
                 href="/contacto"
-                className="inline-flex items-center rounded-md bg-blue-700 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-800 transition"
+                className="hidden sm:inline-flex items-center rounded-full bg-blue-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-800"
               >
                 Cotizar
               </a>
+
+              <MobileMenu />
             </div>
           </div>
         </header>

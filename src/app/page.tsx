@@ -93,8 +93,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white text-gray-900">
-      <section
-        className="relative min-h-[88vh] flex items-center overflow-hidden"
+            <section
+        className="relative flex min-h-[100svh] items-center overflow-hidden pt-24 pb-24 sm:min-h-[92vh] sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24"
         onMouseEnter={() => {
           isPausedRef.current = true;
         }}
@@ -117,52 +117,53 @@ export default function Home() {
               priority={index === 0}
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-black/65" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/25" />
+            <div className="absolute inset-0 bg-black/70" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
           </div>
         ))}
 
-        <div className="relative z-10 max-w-6xl mx-auto w-full px-6">
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-5 sm:px-6">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs md:text-sm font-medium text-white/90 backdrop-blur-sm">
+            <div className="inline-flex max-w-full items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-medium leading-5 text-white/90 backdrop-blur-sm sm:text-sm">
               CDMX y Estado de México · Proyectos residenciales, comerciales y corporativos
             </div>
 
-            <h1 className="mt-6 text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-white">
+            <h1 className="mt-5 max-w-4xl text-3xl font-bold leading-[1.02] tracking-tight text-white sm:mt-6 sm:text-5xl md:text-6xl lg:text-7xl">
               {slides[current].title}
             </h1>
 
-            <p className="mt-6 max-w-3xl text-lg md:text-xl leading-relaxed text-gray-200">
+            <p className="mt-5 max-w-3xl text-base leading-7 text-gray-200 sm:mt-6 sm:text-lg sm:leading-8 md:text-xl">
               {slides[current].description}
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
               <a
                 href="/contacto"
-                className="inline-flex justify-center items-center rounded-xl bg-blue-700 px-7 py-3.5 text-white font-semibold shadow-lg shadow-blue-900/20 transition hover:bg-blue-800"
+                className="inline-flex min-h-12 items-center justify-center rounded-xl bg-blue-700 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-blue-900/20 transition hover:bg-blue-800 sm:px-7"
               >
                 Solicitar cotización
               </a>
               <a
                 href="/proyectos"
-                className="inline-flex justify-center items-center rounded-xl border border-white/25 bg-white/10 px-7 py-3.5 text-white font-semibold backdrop-blur-sm transition hover:bg-white/15"
+                className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/20 bg-white/10 px-6 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/15 sm:px-7"
               >
                 Ver proyectos
               </a>
             </div>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
-              <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm">
-                <div className="text-2xl font-bold text-white">300+</div>
-                <p className="mt-1 text-sm text-gray-200">Proyectos ejecutados</p>
+            <div className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-3 sm:gap-4">
+              <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur-sm sm:p-5">
+                <div className="text-2xl font-bold text-white sm:text-3xl">300+</div>
+                <p className="mt-1 text-sm leading-6 text-gray-200">Proyectos ejecutados</p>
               </div>
-              <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm">
-                <div className="text-2xl font-bold text-white">85+</div>
-                <p className="mt-1 text-sm text-gray-200">Clientes satisfechos</p>
+              <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur-sm sm:p-5">
+                <div className="text-2xl font-bold text-white sm:text-3xl">85+</div>
+                <p className="mt-1 text-sm leading-6 text-gray-200">Clientes satisfechos</p>
               </div>
-              <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm">
-                <div className="text-2xl font-bold text-white">2010–2026</div>
-                <p className="mt-1 text-sm text-gray-200">Experiencia acumulada en ejecución y remodelación</p>
+              <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur-sm sm:p-5">
+                <div className="text-2xl font-bold text-white sm:text-3xl">2010–2026</div>
+                <p className="mt-1 text-sm leading-6 text-gray-200">Experiencia acumulada en ejecución y remodelación</p>
               </div>
             </div>
           </div>
@@ -170,7 +171,7 @@ export default function Home() {
 
         <button
           onClick={prevSlide}
-          className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 bg-black/35 hover:bg-black/55 text-white h-11 w-11 rounded-full flex items-center justify-center backdrop-blur-sm transition"
+          className="absolute left-3 top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/35 text-white backdrop-blur-sm transition hover:bg-black/55 md:left-6 md:flex"
           aria-label="Anterior"
         >
           ‹
@@ -178,13 +179,13 @@ export default function Home() {
 
         <button
           onClick={nextSlide}
-          className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 bg-black/35 hover:bg-black/55 text-white h-11 w-11 rounded-full flex items-center justify-center backdrop-blur-sm transition"
+          className="absolute right-3 top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/35 text-white backdrop-blur-sm transition hover:bg-black/55 md:right-6 md:flex"
           aria-label="Siguiente"
         >
           ›
         </button>
 
-                <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-20">
+        <div className="absolute bottom-5 left-0 right-0 z-20 flex justify-center gap-2 sm:bottom-6 sm:gap-3">
           {slides.map((_, i) => (
             <button
               key={i}
