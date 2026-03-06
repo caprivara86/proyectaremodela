@@ -1,8 +1,7 @@
 ﻿import "./globals.css";
-import Image from "next/image";
 
 const WHATSAPP_PHONE = "525551054340";
-const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotización para una Remodelación. ¿Me pueden apoyar?");
+const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotización para una remodelación. ¿Me pueden apoyar?");
 
 export const metadata = {
   title: "Proyecta Remodelación",
@@ -18,23 +17,18 @@ export default function RootLayout({
     <html lang="es">
       <body className="bg-white text-gray-900 antialiased tracking-tight">
 
-        <header className="fixed top-0 inset-x-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md shadow-sm">
+        <header className="fixed top-0 inset-x-0 z-50 border-b border-white/10 bg-neutral-950/90 backdrop-blur">
           <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="/" className="font-semibold tracking-wide text-white">
-<Image
-  src="/projects/logo/proyecta_logo_alta_res_4000w.png"
-  alt="Proyecta Remodela"
-  width={180}
-  height={44}
-  priority
-/>
-<span className="sr-only">Proyecta</span></a>
+              Proyecta
+              <span className="text-gray-300 font-normal"> Remodelación</span>
+            </a>
 
-            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
-              <a href="/servicios" className="hover:text-gray-900 transition">Servicios</a>
-              <a href="/proyectos" className="hover:text-gray-900 transition">Proyectos</a>
-              <a href="/por-que" className="hover:text-gray-900 transition">Valor agregado</a>
-              <a href="/contacto" className="hover:text-gray-900 transition">Contacto</a>
+            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-200">
+              <a href="/servicios" className="hover:text-white transition">Servicios</a>
+              <a href="/proyectos" className="hover:text-white transition">Proyectos</a>
+              <a href="/por-que" className="hover:text-white transition">Por Qué</a>
+              <a href="/contacto" className="hover:text-white transition">Contacto</a>
             </nav>
 
             <div className="flex items-center gap-3">
@@ -73,8 +67,4 @@ export default function RootLayout({
     </html>
   );
 }
-
-
-
-
 

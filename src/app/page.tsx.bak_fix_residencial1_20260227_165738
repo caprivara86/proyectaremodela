@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -8,54 +8,54 @@ const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotización para una 
 
 const slides = [
   {
-    image: "/projects/residenciales/residencial1.jpeg",
+    image: "/projects/residencial1.jpeg",
     title: "Remodelación Residencial Premium",
-    description:
-      "Transformamos viviendas de nivel medio y alto con ejecución profesional y acabados de alto estándar.",
+    description: "Transformamos viviendas de nivel medio y alto con ejecución profesional y acabados de alto estándar."
   },
   {
-    image: "/projects/corporativas/bridgestone1.jpeg",
+    image: "/projects/residenciales/residencialcocina1.jpeg",
     title: "Ejecución Comercial y Retail",
-    description:
-      "Adecuaciones para franquicias y negocios bajo lineamientos de marca y control presupuestal.",
+    description: "Adecuaciones para franquicias y negocios bajo lineamientos de marca y control presupuestal."
   },
   {
     image: "/projects/residenciales/residencialhabitacion1.jpeg",
     title: "Adecuaciones Corporativas con Control Financiero",
-    description:
-      "Proyectos empresariales con metodología estructurada y cumplimiento de cronogramas.",
-  },
+    description: "Proyectos empresariales con metodología estructurada y cumplimiento de cronogramas."
+  }
 ];
 
 export default function Home() {
-  const [current, setCurrent] = useState(0);
+    const [current, setCurrent] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const isPausedRef = useRef(false);
 
   useEffect(() => {
-    function start() {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-      intervalRef.current = setInterval(() => {
-        if (!isPausedRef.current) {
-          setCurrent((prev) => (prev + 1) % slides.length);
-        }
-      }, 4000);
-    }
+  function start() {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      if (!isPausedRef.current) {
+        setCurrent((prev) => (prev + 1) % slides.length);
+      }
+    }, 4000);
+  }
 
-    start();
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-  }, []);
+  start();
+  return () => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+  };
+}, []);
 
-  // REVEAL_OBSERVER
+    
+    // REVEAL_OBSERVER
   useEffect(() => {
     const main = document.querySelector("main");
     if (!main) return;
 
+    // Observa secciones (y algunos contenedores) sin depender de clases previas
     const els = Array.from(main.querySelectorAll("section")) as HTMLElement[];
     if (!els.length) return;
 
+    // Asegura clase base para animación
     els.forEach((el) => el.classList.add("reveal"));
 
     const io = new IntersectionObserver(
@@ -69,9 +69,7 @@ export default function Home() {
 
     els.forEach((el) => io.observe(el));
     return () => io.disconnect();
-  }, []);
-
-  function resetTimer() {
+  }, []);function resetTimer() {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
       intervalRef.current = setInterval(() => {
@@ -87,7 +85,7 @@ export default function Home() {
     setCurrent((prev) => (prev + 1) % slides.length);
   }
 
-  function prevSlide() {
+    function prevSlide() {
     resetTimer();
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   }
@@ -95,15 +93,10 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
       {/* HERO SLIDER */}
-      <section
+            <section
         className="relative h-[75vh] flex items-center overflow-hidden"
-        onMouseEnter={() => {
-          isPausedRef.current = true;
-        }}
-        onMouseLeave={() => {
-          isPausedRef.current = false;
-          resetTimer();
-        }}
+        onMouseEnter={() => { isPausedRef.current = true; }}
+        onMouseLeave={() => { isPausedRef.current = false; resetTimer(); }}
       >
         {slides.map((slide, index) => (
           <div
@@ -149,10 +142,9 @@ export default function Home() {
           </div>
         </div>
 
-        <button
+                <button
           onClick={prevSlide}
           className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white h-10 w-10 rounded-full flex items-center justify-center"
-          aria-label="Anterior"
         >
           ‹
         </button>
@@ -160,20 +152,16 @@ export default function Home() {
         <button
           onClick={nextSlide}
           className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white h-10 w-10 rounded-full flex items-center justify-center"
-          aria-label="Siguiente"
         >
           ›
         </button>
 
-        <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-20">
+<div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-20">
           {slides.map((_, i) => (
             <button
               key={i}
               aria-label={`Slide ${i + 1}`}
-              onClick={() => {
-                resetTimer();
-                setCurrent(i);
-              }}
+              onClick={() => { resetTimer(); setCurrent(i); }}
               className={`h-2.5 w-2.5 rounded-full transition ${
                 i === current ? "bg-white" : "bg-white/40"
               }`}
@@ -227,27 +215,27 @@ export default function Home() {
 
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { t: "Residenciales", img: "/projects/residenciales/residencial1.jpeg" },
-              { t: "Restaurantes", img: "/projects/restaurantes/restaurante2.jpeg" },
-              { t: "Temáticos", img: "/projects/proyectos-especiales/bingo1.jpeg" },
-              { t: "Corporativo", img: "/projects/corporativas/corporativo2.jpeg" },
-              { t: "Automotriz", img: "/projects/corporativas/bridgestone1.jpeg" },
-              { t: "Casinos", img: "/projects/casinos/casino1.jpeg" },
-            ].map((item) => (
-              <div key={item.t} className="relative h-[260px] rounded-2xl overflow-hidden group">
-                <Image
-                  src={item.img}
-                  alt={item.t}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition" />
-                <div className="absolute bottom-6 left-6 text-white">
-                  <div className="text-lg font-semibold">{item.t}</div>
-                  <div className="mt-2 h-1 w-12 bg-blue-500 group-hover:w-20 transition-all" />
-                </div>
-              </div>
-            ))}
+  { t: "Residenciales", img: "/projects/residencial1.jpeg" },
+  { t: "Cocinas", img: "/projects/residenciales/residencialcocina1.jpeg" },
+  { t: "Habitaciones", img: "/projects/residenciales/residencialhabitacion1.jpeg" },
+  { t: "Corporativo", img: "/projects/corporativas/corporativo1.jpeg" },
+  { t: "Restaurantes", img: "/projects/restaurantes/restaurante2.jpeg" },
+  { t: "Proyectos Especiales", img: "/projects/proyectos-especiales/Acuariomichin1.jpeg" },
+].map((item) => (
+  <div key={item.t} className="relative h-[260px] rounded-2xl overflow-hidden group">
+    <Image
+      src={item.img}
+      alt={item.t}
+      fill
+      className="object-cover transition-transform duration-700 group-hover:scale-105"
+    />
+    <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition" />
+    <div className="absolute bottom-6 left-6 text-white">
+      <div className="text-lg font-semibold">{item.t}</div>
+      <div className="mt-2 h-1 w-12 bg-blue-500 group-hover:w-20 transition-all" />
+    </div>
+  </div>
+))}
           </div>
         </div>
       </section>
@@ -274,26 +262,6 @@ export default function Home() {
               <div className="text-5xl font-bold text-blue-500">5,450+</div>
               <p className="mt-3 text-gray-400">Horas creando resultados</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trayectoria con empresas líderes */}
-      <section className="bg-neutral-950 text-white pb-24 px-6 reveal">
-        <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-2xl md:text-3xl font-semibold">Trayectoria con empresas líderes</h3>
-          <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-            Marcas y empresas que han confiado en nuestra ejecución, control y estándares.
-          </p>
-
-          <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center opacity-90">
-            <Image src="/projects/socios comerciales/acuariomichin.jpg" alt="Acuario Michin" width={160} height={80} className="mx-auto object-contain" />
-            <Image src="/projects/socios comerciales/cmrlogo.png" alt="CMR" width={160} height={80} className="mx-auto object-contain" />
-            <Image src="/projects/socios comerciales/codere.png" alt="Codere" width={160} height={80} className="mx-auto object-contain" />
-            <Image src="/projects/socios comerciales/gmlogo.jpg" alt="GM" width={160} height={80} className="mx-auto object-contain" />
-            <Image src="/projects/socios comerciales/hawkerslogo.jpg" alt="Hawkers" width={160} height={80} className="mx-auto object-contain" />
-            <Image src="/projects/socios comerciales/JAC_logo.jpg" alt="JAC" width={160} height={80} className="mx-auto object-contain" />
-            <Image src="/projects/socios comerciales/Liverpool_logo.svg.png" alt="Liverpool" width={160} height={80} className="mx-auto object-contain" />
           </div>
         </div>
       </section>
@@ -363,3 +331,12 @@ export default function Home() {
     </main>
   );
 }
+
+
+
+
+
+
+
+
+

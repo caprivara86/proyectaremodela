@@ -1,0 +1,205 @@
+import { NextResponse } from "next/server";
+import { createClient } from "@supabase/supabase-js";
+
+type UTM = {
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_content?: string;
+  utm_term?: string;
+};
+
+type LeadPayload = {
+  nombre?: string;
+  telefono?: string;
+  email?: string;
+  tipoProyecto?: string;
+  mensaje?: string;
+  source?: string;
+  utm?: UTM;
+};
+
+function isNonEmptyString(v: unknown, maxLen = 500): v is string {
+  return typeof v === "string" && v.trim().length > 0 && v.length <= maxLen;
+}
+
+function sanitizeString(v: unknown, maxLen = 500): string | undefined {
+  if (typeof v !== "string") return undefined;
+  const s = v.trim();
+  if (!s) return undefined;
+  return s.slice(0, maxLen);
+}
+
+function pickUtm(v: unknown): UTM | undefined {
+  if (!v || typeof v !== "object") return undefined;
+  const o = v as Record<string, unknown>;
+  const utm: UTM = {
+    utm_source: sanitizeString(o.utm_source, 200),
+    utm_medium: sanitizeString(o.utm_medium, 200),
+    utm_campaign: sanitizeString(o.utm_campaign, 200),
+    utm_content: sanitizeString(o.utm_content, 200),
+    utm_term: sanitizeString(o.utm_term, 200),
+  };
+  const hasAny = Object.values(utm).some(Boolean);
+  return hasAny ? utm : undefined;
+}
+
+function supabaseAdmin() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+  if (!url || !serviceKey) {
+    throw new Error(
+      "Faltan variables de entorno: NEXT_PUBLIC_SUPABASE_URL o SUPABASE_SERVICE_ROLE_KEY"
+    );
+  }
+
+  return createClient(url, serviceKey, {
+    auth: { persistSession: false },
+  });
+}
+
+export async function POST(req: Request) {
+  try {
+    const body = (await req.json()) as LeadPayload;
+
+    const nombre = sanitizeString(body.nombre, 120);
+    const telefono = sanitizeString(body.telefono, 40);
+    const email = sanitizeString(body.email, 120);
+    const tipoProyecto = sanitizeString(body.tipoProyecto, 80);
+    const mensaje = sanitizeString(body.mensaje, 2000);
+    const source = sanitizeString(body.source, 80) ?? "website_contact_page";
+    const utm = pickUtm(body.utm);
+
+    // Validación mínima: nombre + (telefono o email)
+    if (!isNonEmptyString(nombre, 120)) {
+      return NextResponse.json(
+        { ok: false, error: "nombre requerido" },
+        { status: 400 }
+      );
+    }
+    if (!isNonEmptyString(telefono, 40) && !isNonEmptyString(email, 120)) {
+      return NextResponse.json(
+        { ok: false, error: "telefono o email requerido" },
+        { status: 400 }
+      );
+    }
+
+    const sb = supabaseAdmin();
+
+    
+    // 1) Auto-detección / auto-creación de campaña (por utm_source + utm_campaign)
+    let campaignId: string | null = null;
+    let campaignName: string | null = null;
+const utmSource = utm?.utm_source ?? null;
+    const utmCampaign = utm?.utm_campaign ?? null;
+
+    if (utmSource && utmCampaign) {
+      const { data: existing, error: findErr } = await sb
+        .from("campaigns")
+        .select("id, name, utm_medium")
+        .eq("utm_source", utmSource)
+        .eq("utm_campaign", utmCampaign)
+        .limit(1)
+        .maybeSingle();
+
+      if (findErr) {
+        return NextResponse.json(
+          { ok: false, error: "db_campaign_lookup_failed", details: findErr.message },
+          { status: 500 }
+        );
+      }
+
+      if (existing?.id) {
+        campaignId = existing.id;
+        campaignName = (existing as any).name ?? null;
+
+        // utm_medium_enrich: si la campaña existe pero no tiene utm_medium y el lead sí trae, la enriquecemos
+        const incomingMedium = utm?.utm_medium ?? null;
+        const existingMedium = (existing as any).utm_medium ?? null;
+        if (!existingMedium && incomingMedium) {
+          await sb.from("campaigns").update({ utm_medium: incomingMedium }).eq("id", existing.id);
+        }
+      } else {
+        const { data: created, error: createErr } = await sb
+          .from("campaigns")
+          .insert({
+            name: `${utmSource}:${utmCampaign}`,
+            utm_source: utmSource,
+            utm_medium: utm?.utm_medium ?? null,
+            utm_campaign: utmCampaign,
+            commission_per_lead: 0,
+          })
+          .select("id, name")
+          .single();
+
+        if (createErr) {
+          // Si hubo carrera (otro request creó la misma campaña), reintenta lectura una vez.
+          const isUnique =
+            (createErr as any).code === "23505" || /duplicate key/i.test(createErr.message);
+
+          if (!isUnique) {
+            return NextResponse.json(
+              { ok: false, error: "db_campaign_create_failed", details: createErr.message },
+              { status: 500 }
+            );
+          }
+
+          const { data: existing2, error: findErr2 } = await sb
+            .from("campaigns")
+            .select("id, name, utm_medium")
+        .eq("utm_source", utmSource)
+            .eq("utm_campaign", utmCampaign)
+            .limit(1)
+            .maybeSingle();
+
+          if (findErr2 || !existing2?.id) {
+            return NextResponse.json(
+              { ok: false, error: "db_campaign_race_failed", details: findErr2?.message ?? "not found" },
+              { status: 500 }
+            );
+          }
+
+          campaignId = existing2.id;
+          campaignName = (existing2 as any).name ?? null;
+} else {
+          campaignId = created.id;
+          campaignName = (created as any).name ?? null;
+}
+      }
+    }
+const insertPayload = {
+      nombre,
+      telefono: telefono ?? null,
+      email: email ?? null,
+      tipo_proyecto: tipoProyecto ?? null,
+      mensaje: mensaje ?? null,
+      source,
+      utm_source: utm?.utm_source ?? null,
+      utm_medium: utm?.utm_medium ?? null,
+      utm_campaign: utm?.utm_campaign ?? null,
+      utm_content: utm?.utm_content ?? null,
+      campaign_id: campaignId,
+    };
+
+    const { data, error } = await sb
+      .from("leads")
+      .insert(insertPayload)
+      .select("id, created_at")
+      .single();
+
+    if (error) {
+      return NextResponse.json(
+        { ok: false, error: "db_insert_failed", details: error.message },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({ ok: true, leadId: data.id, createdAt: data.created_at, campaignId });
+  } catch (e: any) {
+    return NextResponse.json(
+      { ok: false, error: "invalid_json_or_server_error", details: e?.message },
+      { status: 400 }
+    );
+  }
+}
