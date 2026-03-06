@@ -3,11 +3,11 @@ import Image from "next/image";
 import MobileMenu from "../components/MobileMenu";
 
 const WHATSAPP_PHONE = "525551054340";
-const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotizaciÃƒÆ’Ã‚Â³n para una remodelaciÃƒÆ’Ã‚Â³n. Ãƒâ€šÃ‚Â¿Me pueden apoyar?");
+const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotizaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n para una remodelaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n. ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Me pueden apoyar?");
 
 export const metadata = {
-  title: "Proyecta RemodelaciÃƒÂ³n",
-  description: "RemodelaciÃƒÂ³n integral residencial y corporativa en CDMX y Estado de MÃƒÂ©xico.",
+  title: "Proyecta Remodelación | Construcción Inteligente",
+  description: "RemodelaciÃƒÆ’Ã‚Â³n integral residencial y corporativa en CDMX y Estado de MÃƒÆ’Ã‚Â©xico.",
   icons: {
     icon: [
       { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
