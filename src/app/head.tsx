@@ -1,4 +1,38 @@
 export default function Head() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    name: "Proyecta Remodelación y Mantenimiento",
+    url: "https://www.proyectaremodela.com/",
+    logo: "https://www.proyectaremodela.com/projects/logo/proyecta_logo_alta_res_4000w.png",
+    image: "https://www.proyectaremodela.com/projects/logo/proyecta_logo_alta_res_4000w.png",
+    telephone: "+52 55 5105 4340",
+    email: "contacto@proyectaremodela.com",
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Ciudad de México"
+      },
+      {
+        "@type": "State",
+        name: "Estado de México"
+      }
+    ],
+    description:
+      "Empresa de remodelación integral en CDMX y Estado de México. Proyectos residenciales, comerciales y corporativos con control de presupuesto, supervisión profesional y acabados de alto estándar.",
+    sameAs: [
+      "https://www.facebook.com/proyectaremodelacionymantenimiento",
+      "https://www.instagram.com/proyectaremodelacion"
+    ],
+    makesOffer: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Remodelación residencial" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Remodelación comercial" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Remodelación corporativa" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mantenimiento de inmuebles" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Proyectos llave en mano" } }
+    ]
+  };
+
   return (
     <>
       <title>Remodelación integral en CDMX y Estado de México | Proyecta Remodelación</title>
@@ -41,6 +75,11 @@ export default function Head() {
       <meta
         name="twitter:image"
         content="https://www.proyectaremodela.com/projects/logo/proyecta_logo_alta_res_4000w.png"
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
     </>
   );
