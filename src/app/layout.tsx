@@ -5,10 +5,16 @@ const WHATSAPP_PHONE = "525551054340";
 const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotizaci贸n para una remodelaci贸n. 驴Me pueden apoyar?");
 
 export const metadata = {
-  title: "Proyecta Remodelaci贸n",
-  description: "Remodelaci贸n integral residencial y corporativa en CDMX y Estado de M茅xico.",
+  title: "Proyecta Remodelaci髇",
+  description: "Remodelaci髇 integral residencial y corporativa en CDMX y Estado de M閤ico.",
   icons: {
-    icon: "/icon.jpg",
+    icon: [
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" }
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180" }
+    ],
   },
 };
 
