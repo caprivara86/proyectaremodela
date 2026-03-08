@@ -54,11 +54,14 @@ export default function RootLayout({
         <link rel="icon" href="/icon.jpg" />
       </head>
       <body className="bg-white text-gray-900 antialiased tracking-tight">
-                                <header
-          className="fixed inset-x-0 top-0 z-50 overflow-hidden border-b border-white/10 shadow-[0_10px_40px_rgba(15,23,42,0.25)] bg-neutral-900 bg-center bg-repeat-x"
+                                        <header
+          className="fixed inset-x-0 top-0 z-50 overflow-hidden border-b border-white/10 shadow-[0_10px_40px_rgba(15,23,42,0.25)] bg-neutral-900 bg-center bg-repeat-x transition-all duration-500"
           style={{ backgroundImage: 'url("/textures/metal-plate.jpg")', backgroundSize: '420px auto' }}
         >
-          <div className="absolute inset-0 bg-[rgba(17,24,39,0.74)] backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-[rgba(17,24,39,0.50)]" />
+          <div className="steel-light" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 top-[2px] h-[28px] bg-gradient-to-b from-white/[0.10] via-white/[0.04] to-transparent" />
           <div className="relative mx-auto flex h-20 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6">
             <a href="/" className="flex min-w-0 items-center">
               <Image
@@ -85,7 +88,7 @@ export default function RootLayout({
             <div className="flex items-center gap-2 sm:gap-3">
               <a
                 href="tel:+525551054340"
-                className="inline-flex items-center whitespace-nowrap text-sm font-semibold text-white transition hover:text-blue-300"
+                className="inline-flex flex-1 justify-center items-center whitespace-nowrap text-sm font-semibold text-white transition hover:text-blue-300 mr-10 sm:mr-6"
               >
                 55 5105 4340
               </a>

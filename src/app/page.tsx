@@ -117,9 +117,9 @@ export default function Home() {
               priority={index === 0}
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-black/70" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-black/28" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/15 via-25% to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/18 via-transparent to-transparent" />
           </div>
         ))}
 
@@ -171,7 +171,7 @@ export default function Home() {
 
         <button
           onClick={prevSlide}
-          className="absolute left-3 top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/35 text-white backdrop-blur-sm transition hover:bg-black/55 md:left-6 md:flex"
+          className="absolute bottom-6 left-6 z-20 hidden h-11 w-11 items-center justify-center rounded-full bg-black/35 text-white backdrop-blur-sm transition hover:bg-black/55 md:flex"
           aria-label="Anterior"
         >
           ‹
@@ -179,7 +179,7 @@ export default function Home() {
 
         <button
           onClick={nextSlide}
-          className="absolute right-3 top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/35 text-white backdrop-blur-sm transition hover:bg-black/55 md:right-6 md:flex"
+          className="absolute bottom-6 left-20 z-20 hidden h-11 w-11 items-center justify-center rounded-full bg-black/35 text-white backdrop-blur-sm transition hover:bg-black/55 md:flex"
           aria-label="Siguiente"
         >
           ›

@@ -41,3 +41,42 @@ body {
 }
 /* /REVEAL_ANIMATIONS */
 
+
+/* steel reflection animation */
+@keyframes steelLight {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+.steel-light {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.18),
+    rgba(255,255,255,0.08),
+    transparent
+  );
+  filter: blur(6px);
+  animation: steelLight 14s linear infinite;
+  pointer-events: none;
+}
+
+/* mobile steel reflection tuning */
+@media (max-width: 768px) {
+  .steel-light {
+    width: 70px;
+    animation: steelLight 18s linear infinite;
+    filter: blur(4px);
+    opacity: 0.8;
+  }
+}
+
