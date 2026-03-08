@@ -17,26 +17,26 @@ export default function MobileMenu() {
   ];
 
   return (
-    <div className="md:hidden ml-3 relative">
+    <div className="relative ml-2 md:hidden">
       <button
         type="button"
         aria-label={open ? "Cerrar menú" : "Abrir menú"}
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex h-16 w-16 items-center justify-center rounded-xl border border-gray-200 bg-white text-gray-900 shadow-sm transition hover:bg-gray-50"
+        className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/15 bg-white/10 text-white shadow-[0_8px_24px_rgba(0,0,0,0.18)] backdrop-blur-sm transition hover:bg-white/15"
       >
-        <span className="text-3xl leading-none">{open ? "×" : "☰"}</span>
+        <span className="text-2xl leading-none">{open ? "×" : "☰"}</span>
       </button>
 
       {open && (
-        <div className="fixed right-4 top-24 z-50 w-[min(320px,calc(100vw-2rem))] rounded-[2rem] border border-gray-200 bg-white p-8 shadow-2xl">
-          <nav className="flex flex-col gap-6">
+        <div className="fixed right-4 top-20 z-50 w-[min(320px,calc(100vw-2rem))] overflow-hidden rounded-[2rem] border border-white/15 bg-neutral-950/95 p-7 text-white shadow-[0_24px_80px_rgba(15,23,42,0.34)] backdrop-blur-xl">
+          <nav className="flex flex-col gap-5">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-2xl font-semibold text-gray-900 hover:text-blue-700 transition"
+                className="text-xl font-semibold text-white/90 transition hover:text-white"
               >
                 {link.label}
               </a>
@@ -45,7 +45,7 @@ export default function MobileMenu() {
             <a
               href="/contacto"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-xl bg-blue-700 px-6 py-4 text-xl font-semibold text-white hover:bg-blue-800 transition"
+              className="mt-3 inline-flex items-center justify-center rounded-xl bg-white px-6 py-3.5 text-base font-semibold text-neutral-950 transition hover:bg-white/90"
             >
               Solicitar cotización
             </a>

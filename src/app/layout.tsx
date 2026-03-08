@@ -54,8 +54,12 @@ export default function RootLayout({
         <link rel="icon" href="/icon.jpg" />
       </head>
       <body className="bg-white text-gray-900 antialiased tracking-tight">
-                <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[rgba(255,255,255,0.82)] shadow-[0_10px_40px_rgba(15,23,42,0.08)] backdrop-blur-xl">
-          <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6">
+                                <header
+          className="fixed inset-x-0 top-0 z-50 overflow-hidden border-b border-white/10 shadow-[0_10px_40px_rgba(15,23,42,0.25)] bg-neutral-900 bg-center bg-repeat-x"
+          style={{ backgroundImage: 'url("/textures/metal-plate.jpg")', backgroundSize: '420px auto' }}
+        >
+          <div className="absolute inset-0 bg-[rgba(17,24,39,0.74)] backdrop-blur-[1px]" />
+          <div className="relative mx-auto flex h-20 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6">
             <a href="/" className="flex min-w-0 items-center">
               <Image
                 src="/projects/logo/proyecta_logo_alta_res_4000w.png"
@@ -68,20 +72,20 @@ export default function RootLayout({
               <span className="sr-only">Proyecta</span>
             </a>
 
-            <nav className="hidden lg:flex items-center gap-5 text-sm font-medium text-neutral-700">
-              <a href="/servicios" className="transition hover:text-neutral-950">Servicios</a>
-              <a href="/remodelacion-residencial" className="transition hover:text-neutral-950">Residencial</a>
-              <a href="/remodelacion-comercial" className="transition hover:text-neutral-950">Comercial</a>
-              <a href="/remodelacion-corporativa" className="transition hover:text-neutral-950">Corporativa</a>
-              <a href="/proyectos" className="transition hover:text-neutral-950">Proyectos</a>
-              <a href="/por-que" className="transition hover:text-neutral-950">Valor agregado</a>
-              <a href="/contacto" className="transition hover:text-neutral-950">Contacto</a>
+            <nav className="hidden lg:flex items-center gap-5 text-sm font-medium text-white/85">
+              <a href="/servicios" className="transition hover:text-white">Servicios</a>
+              <a href="/remodelacion-residencial" className="transition hover:text-white">Residencial</a>
+              <a href="/remodelacion-comercial" className="transition hover:text-white">Comercial</a>
+              <a href="/remodelacion-corporativa" className="transition hover:text-white">Corporativa</a>
+              <a href="/proyectos" className="transition hover:text-white">Proyectos</a>
+              <a href="/por-que" className="transition hover:text-white">Valor agregado</a>
+              <a href="/contacto" className="transition hover:text-white">Contacto</a>
             </nav>
 
             <div className="flex items-center gap-2 sm:gap-3">
               <a
                 href="tel:+525551054340"
-                className="inline-flex items-center whitespace-nowrap text-sm font-semibold text-neutral-900 transition hover:text-blue-700"
+                className="inline-flex items-center whitespace-nowrap text-sm font-semibold text-white transition hover:text-blue-300"
               >
                 55 5105 4340
               </a>
@@ -90,14 +94,14 @@ export default function RootLayout({
                 href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden md:inline-flex items-center rounded-full border border-neutral-300 px-4 py-2 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-50"
+                className="hidden md:inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/15"
               >
                 WhatsApp
               </a>
 
               <a
                 href="/contacto"
-                className="hidden sm:inline-flex items-center rounded-full bg-blue-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-800"
+                className="hidden sm:inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-neutral-950 transition hover:bg-white/90"
               >
                 Cotizar
               </a>
