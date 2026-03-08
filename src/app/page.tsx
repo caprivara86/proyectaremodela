@@ -9,21 +9,21 @@ const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotización para una 
 const slides = [
   {
     image: "/projects/residenciales/residencial1.jpeg",
-    title: "Remodelación integral en CDMX y Estado de México con control, calidad y cumplimiento",
+    title: "Remodelaciones ejecutadas con control, calidad y cumplimiento",
     description:
-      "Ejecutamos proyectos residenciales, comerciales y corporativos en CDMX y Estado de México, con metodología profesional, supervisión puntual y acabados de alto estándar.",
+      "Desarrollamos proyectos residenciales, comerciales y corporativos en CDMX y Estado de México con planeación técnica, supervisión profesional y acabados de alto estándar.",
   },
   {
     image: "/projects/corporativas/bridgestone1.jpeg",
-    title: "Ejecución comercial y retail bajo estándares de marca",
+    title: "Adecuaciones comerciales y retail con estándares de marca",
     description:
-      "Adecuaciones para franquicias y negocios con control presupuestal, calidad en acabados y cumplimiento operativo.",
+      "Ejecutamos remodelaciones para franquicias, restaurantes y negocios con control presupuestal, precisión en obra y resultados consistentes.",
   },
   {
     image: "/projects/corporativas/areadetrabajo.jpg",
-    title: "Proyectos corporativos con metodología estructurada",
+    title: "Proyectos corporativos con planeación y ejecución profesional",
     description:
-      "Desarrollamos adecuaciones empresariales con enfoque en tiempos, presupuesto, supervisión y resultados duraderos.",
+      "Diseñamos y ejecutamos adecuaciones empresariales con metodología de obra, seguimiento técnico y cumplimiento real de tiempos.",
   },
 ];
 
@@ -130,7 +130,7 @@ export default function Home() {
             </div>
 
             <h1 className="mt-5 max-w-4xl text-3xl font-bold leading-[1.02] tracking-tight text-white sm:mt-6 sm:text-5xl md:text-6xl lg:text-7xl">
-              {slides[current].title}
+              Empresa de remodelación integral en CDMX y Estado de México
             </h1>
 
             <p className="mt-5 max-w-3xl text-base leading-7 text-gray-200 sm:mt-6 sm:text-lg sm:leading-8 md:text-xl">
@@ -207,13 +207,13 @@ export default function Home() {
           <div className="rounded-[32px] border border-neutral-200 bg-white p-8 md:p-12 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
-                Nuestros servicios de remodelación
+                Capacidad de ejecución
               </p>
               <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-neutral-950">
-                Soluciones residenciales, comerciales y corporativas con ejecución profesional
+                Remodelación residencial, comercial y corporativa con control de obra real
               </h2>
               <p className="mt-5 text-lg leading-8 text-neutral-600">
-                Ejecutamos proyectos en Ciudad de México y Estado de México con planeación, control de obra, supervisión puntual y acabados de alto estándar.
+                Atendemos proyectos en Ciudad de México y Estado de México con planeación técnica, supervisión profesional, control presupuestal y acabados de alto estándar.
               </p>
             </div>
 
