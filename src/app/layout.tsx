@@ -1,4 +1,4 @@
-﻿import "./globals.css";
+import "./globals.css";
 import Script from "next/script";
 import Image from "next/image";
 import MobileMenu from "../components/MobileMenu";
@@ -72,7 +72,7 @@ export default function RootLayout({
           className="fixed inset-x-0 top-0 z-50 overflow-hidden border-b border-white/10 shadow-[0_10px_40px_rgba(15,23,42,0.25)] bg-neutral-900 bg-center bg-repeat-x transition-all duration-500"
           style={{ backgroundImage: 'url("/textures/metal-plate.jpg")', backgroundSize: "420px auto" }}
         >
-          <div className="absolute inset-0 bg-[rgba(17,24,39,0.50)]" />
+          <div className="absolute inset-0 bg-[rgba(2,6,23,0.72)]" />
           <div className="steel-light" />
           <div className="pointer-events-none absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent" />
           <div className="pointer-events-none absolute inset-x-0 top-[2px] h-[28px] bg-gradient-to-b from-white/[0.10] via-white/[0.04] to-transparent" />
@@ -132,8 +132,8 @@ export default function RootLayout({
           {children}
         </div>
 
-        <footer className="border-t border-gray-200 bg-gray-50 mt-24">
-          <div className="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10 text-sm text-gray-600">
+        <footer className="relative overflow-hidden border-t border-white/10 shadow-[0_-10px_40px_rgba(15,23,42,0.18)] bg-neutral-900 bg-center bg-repeat-x mt-24" style={{ backgroundImage: 'url("/textures/metal-plate.jpg")', backgroundSize: '420px auto' }}>`r`n          <div className="absolute inset-0 bg-[rgba(2,6,23,0.72)]" />`r`n          <div className="steel-light" />`r`n          <div className="pointer-events-none absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/45 to-transparent" />
+          <div className="relative z-10 max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10 text-sm text-white">
             <div className="space-y-4">
               <Image
                 src="/projects/logo/proyecta_logo_alta_res_4000w.png"
@@ -141,35 +141,35 @@ export default function RootLayout({
                 width={160}
                 height={40}
               />
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-white/90 leading-relaxed">
                 Remodelación integral residencial, comercial y corporativa en CDMX y Estado de México.
               </p>
             </div>
 
             <div className="space-y-3">
-              <h3 className="font-semibold text-gray-900">Contacto</h3>
+              <h3 className="font-semibold text-white">Contacto</h3>
               <p>CDMX y Estado de México</p>
-              <a href="tel:+525551054340" className="hover:text-gray-900 transition">
+              <a href="tel:+525551054340" className="hover:text-white transition">
                 55 5105 4340
               </a>
-              <a href="mailto:contacto@proyectaremodela.com" className="block hover:text-gray-900 transition">
+              <a href="mailto:contacto@proyectaremodela.com" className="block hover:text-white transition">
                 contacto@proyectaremodela.com
               </a>
             </div>
 
             <div className="space-y-3">
-              <h3 className="font-semibold text-gray-900">Legal</h3>
-              <a href="/privacidad" className="block hover:text-gray-900 transition">
+              <h3 className="font-semibold text-white">Legal</h3>
+              <a href="/privacidad" className="block hover:text-white transition">
                 Aviso de privacidad
               </a>
-              <a href="https://wa.me/525551054340" target="_blank" rel="noopener noreferrer" className="block hover:text-gray-900 transition">
+              <a href="https://wa.me/525551054340" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition">
                 WhatsApp
               </a>
             </div>
           </div>
 
-          <div className="border-t border-gray-200">
-            <div className="max-w-6xl mx-auto px-6 py-6 text-xs text-gray-500 flex flex-col md:flex-row items-center justify-between gap-3">
+          <div className="relative z-10 border-t border-white/15">
+            <div className="max-w-6xl mx-auto px-6 py-6 text-xs text-white flex flex-col md:flex-row items-center justify-between gap-3">
               <span>© 2026 Proyecta Remodelación y Mantenimiento</span>
               <span>Construcción Inteligente</span>
             </div>
@@ -180,7 +180,7 @@ export default function RootLayout({
           href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="md:hidden fixed bottom-5 right-5 z-50 rounded-full bg-green-600 px-5 py-3 text-white font-semibold shadow-lg hover:brightness-95"
+          className="fixed bottom-5 right-5 z-50 rounded-full bg-green-600 px-5 py-3 text-white font-semibold shadow-lg hover:brightness-95 whatsapp-pulse"
         >
           WhatsApp
         </a>
