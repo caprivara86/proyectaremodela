@@ -158,7 +158,7 @@ export default function Home() {
                 <p className="mt-1 text-sm leading-6 text-gray-200">Proyectos ejecutados</p>
               </div>
               <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur-sm sm:p-5">
-                <div className="text-2xl font-bold text-white sm:text-3xl">85+</div>
+                <div className="text-2xl font-bold text-white sm:text-3xl">850+</div>
                 <p className="mt-1 text-sm leading-6 text-gray-200">Clientes satisfechos</p>
               </div>
               <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur-sm sm:p-5">
@@ -512,7 +512,7 @@ export default function Home() {
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/55">
                   Confianza
                 </p>
-                <div className="mt-4 text-5xl font-bold tracking-tight text-blue-500">85+</div>
+                <div className="mt-4 text-5xl font-bold tracking-tight text-blue-500">850+</div>
                 <p className="mt-4 text-base leading-7 text-white/75">
                   Clientes satisfechos que valoran el control del proceso, la comunicación clara y la seriedad en la entrega.
                 </p>
@@ -709,3 +709,5 @@ export default function Home() {
     </main>
   );
 }
+
+
