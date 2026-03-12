@@ -286,7 +286,7 @@ export default function RemodelacionIntegralPage() {
   href="https://wa.me/525551054340?text=Hola%20quiero%20cotizar%20una%20remodelacion%20integral"
   target="_blank"
   rel="noopener noreferrer"
-  className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-green-600 px-5 py-3 text-white font-semibold shadow-xl hover:bg-green-700 transition"
+  className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-green-600 px-5 py-3 text-white font-semibold shadow-xl hover:bg-green-700 transition whatsapp-pulse"
 >
   WhatsApp
 </a>
