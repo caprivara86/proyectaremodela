@@ -1,4 +1,5 @@
-import "./globals.css";
+﻿import "./globals.css";
+import Script from "next/script";
 import Image from "next/image";
 import MobileMenu from "../components/MobileMenu";
 import CookieBanner from "@/components/CookieBanner";
@@ -54,9 +55,22 @@ export default function RootLayout({
         <link rel="icon" href="/icon.jpg" />
       </head>
       <body className="bg-white text-gray-900 antialiased tracking-tight">
-                                        <header
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-P7JBMXSDTT"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-P7JBMXSDTT');
+          `}
+        </Script>
+
+        <header
           className="fixed inset-x-0 top-0 z-50 overflow-hidden border-b border-white/10 shadow-[0_10px_40px_rgba(15,23,42,0.25)] bg-neutral-900 bg-center bg-repeat-x transition-all duration-500"
-          style={{ backgroundImage: 'url("/textures/metal-plate.jpg")', backgroundSize: '420px auto' }}
+          style={{ backgroundImage: 'url("/textures/metal-plate.jpg")', backgroundSize: "420px auto" }}
         >
           <div className="absolute inset-0 bg-[rgba(17,24,39,0.50)]" />
           <div className="steel-light" />
