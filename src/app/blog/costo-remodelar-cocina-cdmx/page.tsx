@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function CostoRemodelarCocinaPage() {
   return (
-    <main className="bg-white text-neutral-900">
+    <main className="bg-transparent text-neutral-900">
       <section className="mx-auto max-w-4xl px-6 py-12 md:px-8 md:py-16">
         <nav aria-label="Breadcrumb" className="mb-6 text-sm text-neutral-500">
           <ol className="flex flex-wrap items-center gap-2">

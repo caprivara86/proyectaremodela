@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import SeoProjectPage from "@/components/seo/SeoProjectPage";
 
 export const metadata: Metadata = {

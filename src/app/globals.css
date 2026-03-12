@@ -103,3 +103,69 @@ body {
   animation: whatsappPulse 2.6s infinite;
 }
 
+
+/* premium-surfaces-start */
+@layer utilities {
+  .section-transparent {
+    @apply bg-transparent;
+  }
+
+  .section-dark-glass {
+    background: linear-gradient(180deg, rgba(3,7,18,.70) 0%, rgba(3,7,18,.58) 100%);
+    backdrop-filter: blur(8px);
+  }
+
+  .panel-glass-light {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+    @apply border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.35)];
+  }
+
+  .panel-glass-dark {
+    background: linear-gradient(180deg, rgba(15,23,42,.66) 0%, rgba(15,23,42,.52) 100%);
+    backdrop-filter: blur(10px);
+    @apply border border-white/10 shadow-[0_24px_80px_rgba(2,6,23,0.34)];
+  }
+}
+/* premium-surfaces-end */
+
+
+/* fixed-site-background-start */
+html, body {
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+  background: transparent !important;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(180deg, rgba(2,6,23,.72) 0%, rgba(2,6,23,.58) 45%, rgba(2,6,23,.78) 100%),
+    url("/projects/residenciales/residencial1.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,.08), transparent 38%),
+    linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
+  pointer-events: none;
+}
+/* fixed-site-background-end */
+
+
+
+

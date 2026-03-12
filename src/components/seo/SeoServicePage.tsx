@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 type SeoServicePageProps = {
   title: string;
@@ -81,7 +81,7 @@ export default function SeoServicePage({
       : null;
 
   return (
-    <main className="bg-white text-neutral-900">
+    <main className="bg-transparent text-neutral-900">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {faqSchema ? (

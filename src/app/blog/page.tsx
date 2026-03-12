@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ const posts = [
 
 export default function BlogPage() {
   return (
-    <main className="bg-white text-neutral-900">
+    <main className="bg-transparent text-neutral-900">
       <section className="border-b border-neutral-200 bg-[radial-gradient(circle_at_top,rgba(120,120,120,0.12),transparent_40%),linear-gradient(to_bottom,#fafafa,#ffffff)]">
         <div className="mx-auto max-w-6xl px-6 py-14 md:px-8 md:py-20">
           <div className="max-w-4xl">

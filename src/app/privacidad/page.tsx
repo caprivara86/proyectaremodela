@@ -1,4 +1,4 @@
-﻿export default function PrivacyPage() {
+export default function PrivacyPage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-24">
       <h1 className="text-3xl font-bold mb-6">Aviso de Privacidad</h1>

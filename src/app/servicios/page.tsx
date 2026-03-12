@@ -32,7 +32,7 @@ const services = [
 
 export default function Servicios() {
   return (
-    <main className="min-h-screen bg-white text-gray-900">
+    <main className="min-h-screen bg-transparent text-gray-900">
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">

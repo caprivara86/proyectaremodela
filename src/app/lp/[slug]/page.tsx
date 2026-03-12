@@ -43,7 +43,7 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-white text-gray-900 px-6 py-24">
+    <main className="min-h-screen bg-transparent text-gray-900 px-6 py-24">
       <div className="max-w-6xl mx-auto">
         <div className="inline-flex items-center rounded-full border border-gray-200 px-4 py-2 text-sm text-gray-600">
           Landing • /lp/{slugText}

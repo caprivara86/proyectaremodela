@@ -54,7 +54,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/icon.jpg" />
       </head>
-      <body className="bg-white text-gray-900 antialiased tracking-tight">
+      <body className="bg-neutral-950 text-white antialiased tracking-tight bg-cover bg-center bg-fixed" style={{ backgroundImage: 'url("/projects/proyectos-especiales/remodelacion-acuario-michin.jpeg")' }}>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-P7JBMXSDTT"
           strategy="afterInteractive"
@@ -190,3 +190,4 @@ export default function RootLayout({
     </html>
   );
 }
+

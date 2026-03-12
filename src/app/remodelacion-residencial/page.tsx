@@ -1,6 +1,6 @@
-﻿export default function RemodelacionResidencialPage() {
+export default function RemodelacionResidencialPage() {
   return (
-    <main className="bg-white text-gray-900">
+    <main className="bg-transparent text-gray-900">
       <section className="bg-neutral-950 text-white py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <p className="text-sm uppercase tracking-[0.2em] text-blue-400">

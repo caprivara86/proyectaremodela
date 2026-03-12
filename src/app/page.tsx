@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -92,7 +92,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-white text-gray-900">
+    <main className="min-h-screen bg-transparent text-gray-900">
             <section
         className="relative flex min-h-[100svh] items-center overflow-hidden pt-24 pb-24 sm:min-h-[92vh] sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24"
         onMouseEnter={() => {
@@ -202,25 +202,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] reveal">
+      <section className="py-24 px-6 section-transparent reveal">
         <div className="max-w-6xl mx-auto">
-          <div className="rounded-[32px] border border-neutral-200 bg-white p-8 md:p-12 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
+          <div className="rounded-[32px] panel-glass-light p-8 md:p-12">
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <div className="max-w-3xl">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/80">
                   Nuestro Book
                 </p>
-                <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-neutral-950">
+                <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-white">
                   Portafolio visual de proyectos ejecutados con estándar profesional
                 </h2>
-                <p className="mt-5 text-lg leading-8 text-neutral-600">
+                <p className="mt-5 text-lg leading-8 text-neutral-200">
                   Cada proyecto tiene contexto, restricciones y objetivos distintos. Ejecutamos remodelaciones y adecuaciones con control, metodología y criterios de marca, desde residencial hasta corporativo.
                 </p>
               </div>
 
               <a
                 href="/proyectos"
-                className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-6 py-3 font-semibold text-neutral-950 transition hover:bg-neutral-50"
+                className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-6 py-3 font-semibold text-white transition hover:bg-neutral-50"
               >
                 Ver proyectos
               </a>
@@ -247,7 +247,7 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 transition group-hover:from-black/70" />
                   <div className="absolute inset-x-0 bottom-0 p-6">
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/90">
                       Proyecto ejecutado
                     </p>
                     <div className="mt-3 flex items-end justify-between gap-4">
@@ -268,17 +268,17 @@ export default function Home() {
             </section>
 
 
-      <section className="py-24 px-6 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] reveal">
+      <section className="py-24 px-6 section-transparent reveal">
         <div className="max-w-6xl mx-auto">
-          <div className="rounded-[32px] border border-neutral-200 bg-white p-8 md:p-12 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
+          <div className="rounded-[32px] panel-glass-light p-8 md:p-12">
             <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/80">
                 Capacidad de ejecución
               </p>
-              <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-neutral-950">
+              <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-white">
                 Remodelación residencial, comercial y corporativa con control de obra real
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-600">
+              <p className="mt-5 text-lg leading-8 text-neutral-200">
                 Atendemos proyectos en Ciudad de México y Estado de México con planeación técnica, supervisión profesional, control presupuestal y acabados de alto estándar.
               </p>
             </div>
@@ -288,13 +288,13 @@ export default function Home() {
                 href="/remodelacion-residencial"
                 className="group rounded-[24px] border border-neutral-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-neutral-300 hover:shadow-[0_18px_40px_rgba(15,23,42,0.10)]"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">
                   Residencial
                 </p>
                 <h3 className="mt-4 text-xl font-semibold text-neutral-950">
                   Remodelación residencial
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-neutral-600">
+                <p className="mt-3 text-sm leading-6 text-neutral-700">
                   Remodelación de casas, departamentos y residencias con enfoque en calidad, control de obra y acabados premium.
                 </p>
               </a>
@@ -303,13 +303,13 @@ export default function Home() {
                 href="/remodelacion-comercial"
                 className="group rounded-[24px] border border-neutral-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-neutral-300 hover:shadow-[0_18px_40px_rgba(15,23,42,0.10)]"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">
                   Comercial
                 </p>
                 <h3 className="mt-4 text-xl font-semibold text-neutral-950">
                   Remodelación comercial
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-neutral-600">
+                <p className="mt-3 text-sm leading-6 text-neutral-700">
                   Adecuación de locales, restaurantes, franquicias y espacios de atención al cliente con estándares profesionales.
                 </p>
               </a>
@@ -318,104 +318,104 @@ export default function Home() {
                 href="/remodelacion-corporativa"
                 className="group rounded-[24px] border border-neutral-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-neutral-300 hover:shadow-[0_18px_40px_rgba(15,23,42,0.10)]"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">
                   Corporativo
                 </p>
                 <h3 className="mt-4 text-xl font-semibold text-neutral-950">
                   Remodelación corporativa
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-neutral-600">
+                <p className="mt-3 text-sm leading-6 text-neutral-700">
                   Adecuación de oficinas y espacios empresariales con metodología estructurada, control presupuestal y seguimiento de proyecto.
                 </p>
               </a>
             </div>
           </div>
         </div>
-      </section><section className="py-20 px-6 bg-neutral-50">
+      </section><section className="py-20 px-6 section-transparent reveal">
         <div className="max-w-6xl mx-auto">
-          <div className="rounded-[32px] border border-neutral-200 bg-white p-8 md:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
+          <div className="rounded-[32px] panel-glass-light p-8 md:p-12">
             <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/80">
                 Guías de construcción
               </p>
-              <h2 className="mt-4 text-3xl md:text-4xl font-bold tracking-tight text-neutral-950">
+              <h2 className="mt-4 text-3xl md:text-4xl font-bold tracking-tight text-white">
                 Costos, ideas y planificación para remodelar mejor
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-600">
+              <p className="mt-5 text-lg leading-8 text-neutral-200">
                 Explora guías pensadas para ayudarte a entender costos, materiales, alcances y decisiones clave antes de iniciar una remodelación en CDMX y Estado de México.
               </p>
             </div>
 
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               <a href="/blog/costo-remodelar-cocina-cdmx" className="rounded-2xl border border-neutral-200 p-5 transition hover:-translate-y-1 hover:shadow-md">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">Costo</p>
-                <h3 className="mt-3 text-xl font-semibold text-neutral-950">Cuánto cuesta remodelar una cocina en CDMX</h3>
-                <p className="mt-3 text-sm leading-6 text-neutral-600">Factores, materiales y decisiones que influyen en el presupuesto.</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">Costo</p>
+                <h3 className="mt-3 text-xl font-semibold text-white">Cuánto cuesta remodelar una cocina en CDMX</h3>
+                <p className="mt-3 text-sm leading-6 text-neutral-200">Factores, materiales y decisiones que influyen en el presupuesto.</p>
               </a>
 
               <a href="/remodelacion-residencial/cocina" className="rounded-2xl border border-neutral-200 p-5 transition hover:-translate-y-1 hover:shadow-md">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">Servicio</p>
-                <h3 className="mt-3 text-xl font-semibold text-neutral-950">Remodelación de cocina</h3>
-                <p className="mt-3 text-sm leading-6 text-neutral-600">Diseño, ejecución y control de obra para cocinas funcionales y duraderas.</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">Servicio</p>
+                <h3 className="mt-3 text-xl font-semibold text-white">Remodelación de cocina</h3>
+                <p className="mt-3 text-sm leading-6 text-neutral-200">Diseño, ejecución y control de obra para cocinas funcionales y duraderas.</p>
               </a>
 
               <a href="/blog" className="rounded-2xl border border-neutral-200 bg-neutral-900 p-5 text-white transition hover:-translate-y-1 hover:shadow-md">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">Explorar</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/90">Explorar</p>
                 <h3 className="mt-3 text-xl font-semibold">Ver todas las guías</h3>
-                <p className="mt-3 text-sm leading-6 text-white/80">Consulta artículos sobre costos, planeación, materiales y remodelación.</p>
+                <p className="mt-3 text-sm leading-6 text-neutral-200">Consulta artículos sobre costos, planeación, materiales y remodelación.</p>
               </a>
             </div>
           </div>
         </div>
       </section>
-            <section className="py-24 px-6 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] reveal">
+            <section className="py-24 px-6 section-transparent reveal">
         <div className="max-w-6xl mx-auto">
-          <div className="rounded-[32px] border border-neutral-200 bg-white p-8 md:p-12 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
+          <div className="rounded-[32px] panel-glass-light p-8 md:p-12">
             <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/80">
                 Credenciales operativas
               </p>
-              <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-neutral-950">
+              <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-white">
                 Ejecución con calidad, control financiero y cumplimiento real
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-600">
+              <p className="mt-5 text-lg leading-8 text-neutral-200">
                 Nuestra operación está diseñada para reducir incertidumbre y elevar el estándar de cada proyecto, desde la planeación hasta la entrega final.
               </p>
             </div>
 
             <div className="mt-10 grid gap-5 md:grid-cols-3">
               <div className="rounded-[24px] border border-neutral-200 bg-white p-7 text-left shadow-[0_12px_32px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(15,23,42,0.10)]">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">
                   Calidad
                 </p>
                 <h3 className="mt-4 text-2xl font-semibold tracking-tight text-neutral-950">
                   Calidad y excelencia
                 </h3>
-                <p className="mt-4 text-base leading-7 text-neutral-600">
+                <p className="mt-4 text-base leading-7 text-neutral-700">
                   Materiales confiables, supervisión puntual y mano de obra experta para lograr acabados consistentes y resultados duraderos.
                 </p>
               </div>
 
               <div className="rounded-[24px] border border-neutral-200 bg-neutral-950 p-7 text-left text-white shadow-[0_18px_40px_rgba(15,23,42,0.18)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_rgba(15,23,42,0.22)]">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">
                   Control
                 </p>
                 <h3 className="mt-4 text-2xl font-semibold tracking-tight">
                   Control financiero
                 </h3>
-                <p className="mt-4 text-base leading-7 text-white/80">
+                <p className="mt-4 text-base leading-7 text-neutral-200">
                   Metodología estructurada, seguimiento presupuestal y visibilidad del proyecto para mantener orden y tomar mejores decisiones.
                 </p>
               </div>
 
               <div className="rounded-[24px] border border-neutral-200 bg-white p-7 text-left shadow-[0_12px_32px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(15,23,42,0.10)]">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">
                   Entrega
                 </p>
                 <h3 className="mt-4 text-2xl font-semibold tracking-tight text-neutral-950">
                   Cumplimiento real
                 </h3>
-                <p className="mt-4 text-base leading-7 text-neutral-600">
+                <p className="mt-4 text-base leading-7 text-neutral-700">
                   Cronogramas realistas, comunicación transparente y enfoque operativo para entregar con seriedad y menor fricción.
                 </p>
               </div>
@@ -424,18 +424,18 @@ export default function Home() {
         </div>
       </section>
 
-            <section className="py-24 px-6 bg-white reveal">
+            <section className="py-24 px-6 section-transparent reveal">
         <div className="max-w-6xl mx-auto">
           <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="rounded-[32px] border border-neutral-200 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] p-8 md:p-12 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
+            <div className="rounded-[32px] panel-glass-light p-8 md:p-12">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/80">
                 Empresa de remodelación integral
               </p>
-              <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-neutral-950">
+              <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-white">
                 Empresa de remodelación integral en CDMX y Estado de México
               </h2>
 
-              <div className="mt-6 space-y-5 text-lg leading-8 text-neutral-600">
+              <div className="mt-6 space-y-5 text-lg leading-8 text-neutral-200">
                 <p>
                   En Proyecta Remodelación y Mantenimiento desarrollamos proyectos residenciales, comerciales y corporativos con un enfoque integral que combina planeación, control presupuestal, supervisión de obra y acabados de alto estándar.
                 </p>
@@ -459,21 +459,21 @@ export default function Home() {
               <div className="mt-8 space-y-5">
                 <div className="rounded-[24px] border border-white/10 bg-white/5 p-5">
                   <p className="text-sm font-semibold text-white">Cobertura estratégica</p>
-                  <p className="mt-2 text-sm leading-6 text-white/75">
+                  <p className="mt-2 text-sm leading-6 text-white/95">
                     Atención en Ciudad de México y Estado de México para proyectos habitacionales, comerciales y corporativos.
                   </p>
                 </div>
 
                 <div className="rounded-[24px] border border-white/10 bg-white/5 p-5">
                   <p className="text-sm font-semibold text-white">Metodología clara</p>
-                  <p className="mt-2 text-sm leading-6 text-white/75">
+                  <p className="mt-2 text-sm leading-6 text-white/95">
                     Definición de alcances, control de presupuesto, seguimiento de obra y comunicación transparente durante todo el proyecto.
                   </p>
                 </div>
 
                 <div className="rounded-[24px] border border-white/10 bg-white/5 p-5">
                   <p className="text-sm font-semibold text-white">Resultados duraderos</p>
-                  <p className="mt-2 text-sm leading-6 text-white/75">
+                  <p className="mt-2 text-sm leading-6 text-white/95">
                     Soluciones pensadas para funcionar bien, verse bien y sostener su valor con el paso del tiempo. Nada de maquillaje de obra, que eso luego cobra factura.
                   </p>
                 </div>
@@ -486,7 +486,7 @@ export default function Home() {
 
       
 
-      <section className="bg-neutral-950 text-white py-24 px-6 reveal">
+      <section className="section-transparent text-white py-24 px-6 reveal">
         <div className="max-w-6xl mx-auto">
           <div className="rounded-[32px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04)_0%,rgba(255,255,255,0.015)_100%)] p-8 md:p-12 shadow-[0_24px_80px_rgba(0,0,0,0.30)]">
             <div className="max-w-3xl">
@@ -496,7 +496,7 @@ export default function Home() {
               <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-white">
                 Experiencia que se traduce en resultados
               </h2>
-              <p className="mt-5 text-lg leading-8 text-white/70">
+              <p className="mt-5 text-lg leading-8 text-white/90">
                 La ejecución consistente deja huella en números reales: proyectos terminados, clientes que regresan y horas dedicadas a convertir planos, ideas y restricciones en espacios funcionales.
               </p>
             </div>
@@ -507,7 +507,7 @@ export default function Home() {
                   Proyectos
                 </p>
                 <div className="mt-4 text-5xl font-bold tracking-tight text-blue-500">300+</div>
-                <p className="mt-4 text-base leading-7 text-white/75">
+                <p className="mt-4 text-base leading-7 text-white/95">
                   Proyectos ejecutados en distintas categorías, desde remodelación residencial hasta adecuaciones comerciales y corporativas.
                 </p>
               </div>
@@ -517,7 +517,7 @@ export default function Home() {
                   Confianza
                 </p>
                 <div className="mt-4 text-5xl font-bold tracking-tight text-blue-500">850+</div>
-                <p className="mt-4 text-base leading-7 text-white/75">
+                <p className="mt-4 text-base leading-7 text-white/95">
                   Clientes satisfechos que valoran el control del proceso, la comunicación clara y la seriedad en la entrega.
                 </p>
               </div>
@@ -527,14 +527,14 @@ export default function Home() {
                   Ejecución
                 </p>
                 <div className="mt-4 text-5xl font-bold tracking-tight text-blue-500">5,450+</div>
-                <p className="mt-4 text-base leading-7 text-white/75">
+                <p className="mt-4 text-base leading-7 text-white/95">
                   Horas de trabajo enfocadas en resolver obra real. El concreto no perdona improvisaciones, así que mejor método que drama.
                 </p>
               </div>
             </div>
           </div>
         </div>
-      </section><section className="bg-neutral-950 text-white pb-24 px-6 reveal">
+      </section><section className="section-transparent text-white pb-24 px-6 reveal">
         <div className="max-w-6xl mx-auto">
           <div className="rounded-[32px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0.01)_100%)] p-8 md:p-12 shadow-[0_24px_80px_rgba(0,0,0,0.30)]">
             <div className="max-w-3xl">
@@ -544,7 +544,7 @@ export default function Home() {
               <h3 className="mt-4 text-2xl md:text-4xl font-semibold tracking-tight text-white">
                 Trayectoria con empresas líderes
               </h3>
-              <p className="mt-5 text-lg leading-8 text-white/70">
+              <p className="mt-5 text-lg leading-8 text-white/90">
                 Marcas y empresas que han confiado en nuestra ejecución, control y estándares en proyectos residenciales, comerciales y corporativos.
               </p>
             </div>
@@ -575,30 +575,30 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-[linear-gradient(180deg,#f8fafc_0%,#ffffff_100%)] py-24 px-6 reveal">
+      <section className="py-24 px-6 section-transparent reveal">
         <div className="max-w-6xl mx-auto">
-          <div className="rounded-[32px] border border-neutral-200 bg-white p-8 md:p-12 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
+          <div className="rounded-[32px] panel-glass-light p-8 md:p-12">
             <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/80">
                 Siguiente paso
               </p>
-              <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-neutral-950">
+              <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-white">
                 ¿Qué tipo de proyecto deseas desarrollar?
               </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-600">
+              <p className="mt-5 text-lg leading-8 text-neutral-200">
                 Contamos con experiencia tanto en remodelación residencial como en ejecución comercial y corporativa, con planeación, control de obra y atención profesional.
               </p>
             </div>
 
             <div className="mt-12 grid gap-6 md:grid-cols-2">
-              <div className="rounded-[28px] border border-neutral-200 bg-white p-8 shadow-[0_12px_32px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(15,23,42,0.10)]">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">
+              <div className="rounded-[28px] panel-glass-light p-8 transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(15,23,42,0.10)]">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">
                   Residencial
                 </p>
-                <h3 className="mt-4 text-2xl font-semibold tracking-tight text-neutral-950">
+                <h3 className="mt-4 text-2xl font-semibold tracking-tight text-white">
                   Proyecto Residencial
                 </h3>
-                <p className="mt-4 text-base leading-7 text-neutral-600">
+                <p className="mt-4 text-base leading-7 text-neutral-200">
                   Remodelación integral para viviendas de nivel medio y alto, con acabados premium, supervisión profesional y control de ejecución.
                 </p>
                 <div className="mt-8">
@@ -611,14 +611,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="rounded-[28px] border border-neutral-200 bg-neutral-950 p-8 text-white shadow-[0_18px_40px_rgba(15,23,42,0.18)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_rgba(15,23,42,0.22)]">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
+              <div className="rounded-[28px] panel-glass-dark p-8 text-white transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_rgba(15,23,42,0.22)]">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">
                   Comercial / Corporativo
                 </p>
                 <h3 className="mt-4 text-2xl font-semibold tracking-tight">
                   Proyecto Comercial / Corporativo
                 </h3>
-                <p className="mt-4 text-base leading-7 text-white/80">
+                <p className="mt-4 text-base leading-7 text-neutral-200">
                   Ejecución bajo lineamientos de marca, control presupuestal, coordinación operativa y cumplimiento de cronogramas corporativos.
                 </p>
                 <div className="mt-8">
@@ -634,17 +634,17 @@ export default function Home() {
           </div>
         </div>
       </section>
-            <section id="contacto" className="bg-[linear-gradient(180deg,#f8fafc_0%,#ffffff_100%)] py-24 px-6 reveal">
+            <section id="contacto" className="py-24 px-6 section-transparent reveal">
         <div className="max-w-6xl mx-auto">
           <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-            <div className="rounded-[32px] border border-neutral-200 bg-neutral-950 p-8 md:p-12 text-white shadow-[0_24px_80px_rgba(15,23,42,0.22)]">
+            <div className="rounded-[32px] panel-glass-dark p-8 md:p-12 text-white">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/55">
                 Contacto
               </p>
               <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight">
                 Hablemos de tu proyecto
               </h2>
-              <p className="mt-5 text-lg leading-8 text-white/75">
+              <p className="mt-5 text-lg leading-8 text-white/95">
                 Atendemos proyectos residenciales, comerciales y corporativos en Ciudad de México y Estado de México, con enfoque en planeación, control de obra y ejecución profesional.
               </p>
 
@@ -671,21 +671,21 @@ export default function Home() {
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/55">
                     Enfoque
                   </p>
-                  <p className="mt-3 text-base leading-7 text-white/75">
+                  <p className="mt-3 text-base leading-7 text-white/95">
                     Remodelación integral, adecuaciones comerciales, ejecución corporativa y acompañamiento profesional desde el primer contacto.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="rounded-[32px] border border-neutral-200 bg-white p-8 md:p-12 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
+            <div className="rounded-[32px] panel-glass-light p-8 md:p-12">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/80">
                 Inicio de conversación
               </p>
-              <h3 className="mt-4 text-2xl md:text-4xl font-semibold tracking-tight text-neutral-950">
+              <h3 className="mt-4 text-2xl md:text-4xl font-semibold tracking-tight text-white">
                 Solicita una cotización o cuéntanos qué necesitas remodelar
               </h3>
-              <p className="mt-5 text-lg leading-8 text-neutral-600">
+              <p className="mt-5 text-lg leading-8 text-neutral-200">
                 Podemos orientarte sobre alcances, tipo de proyecto y siguiente paso para comenzar con mayor claridad. Menos adivinación, más proyecto bien aterrizado.
               </p>
 
@@ -701,7 +701,7 @@ export default function Home() {
 
                 <a
                   href="/contacto"
-                  className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-6 py-3.5 font-semibold text-neutral-950 transition hover:bg-neutral-50"
+                  className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-6 py-3.5 font-semibold text-white transition hover:bg-neutral-50"
                 >
                   Ir al formulario de contacto
                 </a>
@@ -713,5 +713,16 @@ export default function Home() {
     </main>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
