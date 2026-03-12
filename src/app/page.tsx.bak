@@ -205,72 +205,6 @@ export default function Home() {
       <section className="py-24 px-6 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] reveal">
         <div className="max-w-6xl mx-auto">
           <div className="rounded-[32px] border border-neutral-200 bg-white p-8 md:p-12 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
-            <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-              <div className="max-w-3xl">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
-                  Nuestro Book
-                </p>
-                <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-neutral-950">
-                  Portafolio visual de proyectos ejecutados con estándar profesional
-                </h2>
-                <p className="mt-5 text-lg leading-8 text-neutral-600">
-                  Cada proyecto tiene contexto, restricciones y objetivos distintos. Ejecutamos remodelaciones y adecuaciones con control, metodología y criterios de marca, desde residencial hasta corporativo.
-                </p>
-              </div>
-
-              <a
-                href="/proyectos"
-                className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-6 py-3 font-semibold text-neutral-950 transition hover:bg-neutral-50"
-              >
-                Ver proyectos
-              </a>
-            </div>
-
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {[
-                { t: "Residenciales", img: "/projects/residenciales/residencial1.jpeg" },
-                { t: "Restaurantes", img: "/projects/restaurantes/restaurante2.jpeg" },
-                { t: "Temáticos", img: "/projects/proyectos-especiales/bingo1.jpeg" },
-                { t: "Corporativo", img: "/projects/corporativas/corporativo2.jpeg" },
-                { t: "Automotriz", img: "/projects/corporativas/bridgestone1.jpeg" },
-                { t: "Casinos", img: "/projects/casinos/casino1.jpeg" }
-              ].map((item) => (
-                <div
-                  key={item.t}
-                  className="group relative h-[280px] overflow-hidden rounded-[28px] border border-neutral-200 bg-neutral-950 shadow-[0_18px_40px_rgba(15,23,42,0.10)]"
-                >
-                  <Image
-                    src={item.img}
-                    alt={item.t}
-                    fill
-                    className="object-cover transition duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 transition group-hover:from-black/70" />
-                  <div className="absolute inset-x-0 bottom-0 p-6">
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
-                      Proyecto ejecutado
-                    </p>
-                    <div className="mt-3 flex items-end justify-between gap-4">
-                      <h3 className="text-2xl font-semibold tracking-tight text-white">
-                        {item.t}
-                      </h3>
-                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition group-hover:bg-white/15">
-                        →
-                      </span>
-                    </div>
-                    <div className="mt-4 h-px w-full bg-white/15" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-            </section>
-
-
-      <section className="py-24 px-6 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] reveal">
-        <div className="max-w-6xl mx-auto">
-          <div className="rounded-[32px] border border-neutral-200 bg-white p-8 md:p-12 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
                 Capacidad de ejecución
@@ -483,8 +417,70 @@ export default function Home() {
         </div>
             </section>
 
+      <section className="py-24 px-6 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] reveal">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-[32px] border border-neutral-200 bg-white p-8 md:p-12 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
+            <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+              <div className="max-w-3xl">
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
+                  Nuestro Book
+                </p>
+                <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-neutral-950">
+                  Portafolio visual de proyectos ejecutados con estándar profesional
+                </h2>
+                <p className="mt-5 text-lg leading-8 text-neutral-600">
+                  Cada proyecto tiene contexto, restricciones y objetivos distintos. Ejecutamos remodelaciones y adecuaciones con control, metodología y criterios de marca, desde residencial hasta corporativo.
+                </p>
+              </div>
 
-      
+              <a
+                href="/proyectos"
+                className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-6 py-3 font-semibold text-neutral-950 transition hover:bg-neutral-50"
+              >
+                Ver proyectos
+              </a>
+            </div>
+
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                { t: "Residenciales", img: "/projects/residenciales/residencial1.jpeg" },
+                { t: "Restaurantes", img: "/projects/restaurantes/restaurante2.jpeg" },
+                { t: "Temáticos", img: "/projects/proyectos-especiales/bingo1.jpeg" },
+                { t: "Corporativo", img: "/projects/corporativas/corporativo2.jpeg" },
+                { t: "Automotriz", img: "/projects/corporativas/bridgestone1.jpeg" },
+                { t: "Casinos", img: "/projects/casinos/casino1.jpeg" }
+              ].map((item) => (
+                <div
+                  key={item.t}
+                  className="group relative h-[280px] overflow-hidden rounded-[28px] border border-neutral-200 bg-neutral-950 shadow-[0_18px_40px_rgba(15,23,42,0.10)]"
+                >
+                  <Image
+                    src={item.img}
+                    alt={item.t}
+                    fill
+                    className="object-cover transition duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 transition group-hover:from-black/70" />
+                  <div className="absolute inset-x-0 bottom-0 p-6">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
+                      Proyecto ejecutado
+                    </p>
+                    <div className="mt-3 flex items-end justify-between gap-4">
+                      <h3 className="text-2xl font-semibold tracking-tight text-white">
+                        {item.t}
+                      </h3>
+                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition group-hover:bg-white/15">
+                        →
+                      </span>
+                    </div>
+                    <div className="mt-4 h-px w-full bg-white/15" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+            </section>
 
       <section className="bg-neutral-950 text-white py-24 px-6 reveal">
         <div className="max-w-6xl mx-auto">
