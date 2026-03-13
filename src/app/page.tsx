@@ -117,23 +117,23 @@ export default function Home() {
               priority={index === 0}
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-black/28" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/15 via-25% to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/18 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-black/42" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/30 via-25% to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/10 to-transparent" />
           </div>
         ))}
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-5 sm:px-6">
           <div className="max-w-4xl">
-            <div className="inline-flex max-w-full items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-medium leading-5 text-white/90 backdrop-blur-sm sm:text-sm">
+            <div className="inline-flex max-w-full items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-medium leading-5 text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.45)] backdrop-blur-sm sm:text-sm">
               CDMX y Estado de México · Proyectos residenciales, comerciales y corporativos
             </div>
 
-            <h1 className="mt-5 max-w-4xl text-3xl font-bold leading-[1.02] tracking-tight text-white sm:mt-6 sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="mt-5 max-w-4xl text-3xl font-bold leading-[1.02] tracking-tight text-white [text-shadow:0_4px_18px_rgba(0,0,0,0.55)] sm:mt-6 sm:text-5xl md:text-6xl lg:text-7xl">
               Empresa de remodelación integral en CDMX y Estado de México
             </h1>
 
-            <p className="mt-5 max-w-3xl text-base leading-7 text-gray-200 sm:mt-6 sm:text-lg sm:leading-8 md:text-xl">
+            <p className="mt-5 max-w-3xl text-base leading-7 text-white/95 [text-shadow:0_2px_12px_rgba(0,0,0,0.45)] sm:mt-6 sm:text-lg sm:leading-8 md:text-xl">
               {slides[current].description}
             </p>
 
@@ -713,6 +713,8 @@ export default function Home() {
     </main>
   );
 }
+
+
 
 
 
