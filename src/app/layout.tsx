@@ -1,4 +1,4 @@
-import "./globals.css";
+﻿import "./globals.css";
 import Script from "next/script";
 import Image from "next/image";
 import MobileMenu from "../components/MobileMenu";
@@ -52,6 +52,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+<Script src="https://www.googletagmanager.com/gtag/js?id=AW-18011541962" strategy="afterInteractive" /><Script id="google-ads" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18011541962');`}</Script>
         <link rel="icon" href="/icon.jpg" />
       </head>
       <body className="bg-neutral-950 text-white antialiased tracking-tight bg-cover bg-center bg-fixed" style={{ backgroundImage: 'url("/projects/proyectos-especiales/remodelacion-acuario-michin.jpeg")' }}>
@@ -132,7 +133,7 @@ export default function RootLayout({
           {children}
         </div>
 
-        <footer className="relative overflow-hidden border-t border-white/10 shadow-[0_-10px_40px_rgba(15,23,42,0.18)] bg-neutral-900 bg-center bg-repeat-x mt-24" style={{ backgroundImage: 'url("/textures/metal-plate.jpg")', backgroundSize: '420px auto' }}>`r`n          <div className="absolute inset-0 bg-[rgba(2,6,23,0.72)]" />`r`n          <div className="steel-light" />`r`n          <div className="pointer-events-none absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/45 to-transparent" />
+        <footer className="relative overflow-hidden border-t border-white/10 shadow-[0_-10px_40px_rgba(15,23,42,0.18)] bg-neutral-900 bg-center bg-repeat-x mt-24" style={{ backgroundImage: 'url("/textures/metal-plate.jpg")', backgroundSize: '420px auto' }}>          <div className="absolute inset-0 bg-[rgba(2,6,23,0.72)]" />          <div className="steel-light" />          <div className="pointer-events-none absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/45 to-transparent" />
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10 text-sm text-white">
             <div className="space-y-4">
               <Image
@@ -190,4 +191,6 @@ export default function RootLayout({
     </html>
   );
 }
+
+
 
