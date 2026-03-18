@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -107,7 +107,7 @@ export default function ContactoPage() {
 
               <a
                 href="#form"
-                className="inline-flex justify-center rounded-md border border-white/30 px-6 py-3 font-semibold text-white hover:bg-white/10 transition"
+                className="inline-flex justify-center rounded-md border border-white/30 px-6 py-3 font-semibold text-white hover:bg-black/50 transition"
               >
                 Llenar formulario
               </a>
@@ -237,7 +237,7 @@ export default function ContactoPage() {
                 Si prefieres, contáctanos por WhatsApp. Te ayudamos a definir el mejor camino para tu remodelación.
               </p>
 
-              <div className="mt-6 space-y-3 text-gray-700">
+              <div className="mt-6 space-y-3 text-white/90">
                 <div className="flex items-center justify-between">
                   <span className="font-semibold">Teléfono</span>
                   <span>55 5105 4340</span>
@@ -268,7 +268,7 @@ export default function ContactoPage() {
 
             <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8 md:p-10">
               <h3 className="text-xl font-semibold">Qué información ayuda para cotizar</h3>
-              <ul className="mt-4 space-y-3 text-gray-700">
+              <ul className="mt-4 space-y-3 text-white/90">
                 {[
                   "Ubicación del inmueble",
                   "Tipo de proyecto (residencial, corporativo, retail, etc.)",
@@ -291,3 +291,4 @@ export default function ContactoPage() {
     </main>
   );
 }
+

@@ -1,4 +1,4 @@
-export default function RemodelacionComercialPage() {
+﻿export default function RemodelacionComercialPage() {
   return (
     <main className="bg-transparent text-gray-900">
       <section className="bg-neutral-950 text-white py-24 px-6">
@@ -24,7 +24,7 @@ export default function RemodelacionComercialPage() {
             </a>
             <a
               href="/proyectos"
-              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-6 py-3.5 font-semibold text-white hover:bg-white/15 transition"
+              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-black/50 px-6 py-3.5 font-semibold text-white hover:bg-white/15 transition"
             >
               Ver proyectos
             </a>
@@ -35,20 +35,20 @@ export default function RemodelacionComercialPage() {
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
           <div className="rounded-2xl border border-gray-200 p-6">
-            <h2 className="text-xl font-semibold">Imagen de marca</h2>
-            <p className="mt-3 text-gray-600 leading-7">
+            <h2 className="text-xl font-semibold text-white">Imagen de marca</h2>
+            <p className="mt-3 text-white/90 leading-7">
               Desarrollamos adecuaciones comerciales alineadas a lineamientos visuales y experiencia del cliente.
             </p>
           </div>
           <div className="rounded-2xl border border-gray-200 p-6">
-            <h2 className="text-xl font-semibold">Operación funcional</h2>
-            <p className="mt-3 text-gray-600 leading-7">
+            <h2 className="text-xl font-semibold text-white">Operación funcional</h2>
+            <p className="mt-3 text-white/90 leading-7">
               Diseñamos y ejecutamos espacios pensados para flujo operativo, atención y desempeño comercial.
             </p>
           </div>
           <div className="rounded-2xl border border-gray-200 p-6">
-            <h2 className="text-xl font-semibold">Cumplimiento de tiempos</h2>
-            <p className="mt-3 text-gray-600 leading-7">
+            <h2 className="text-xl font-semibold text-white">Cumplimiento de tiempos</h2>
+            <p className="mt-3 text-white/90 leading-7">
               Priorizamos cronogramas y control de obra para reducir afectaciones en apertura o continuidad de operación.
             </p>
           </div>
@@ -80,3 +80,5 @@ export default function RemodelacionComercialPage() {
     </main>
   );
 }
+
+

@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 const WHATSAPP_PHONE = "525551054340";
 const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotización para una remodelación. ¿Me pueden apoyar?");
@@ -57,7 +57,7 @@ export default function PorQue() {
                 href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex justify-center rounded-md border border-white/30 px-6 py-3 font-semibold text-white hover:bg-white/10 transition"
+                className="inline-flex justify-center rounded-md border border-white/30 px-6 py-3 font-semibold text-white hover:bg-black/50 transition"
               >
                 WhatsApp
               </a>
@@ -71,8 +71,8 @@ export default function PorQue() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold">Calidad y excelencia en cada detalle</h2>
-              <p className="mt-4 text-gray-600 max-w-2xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Calidad y excelencia en cada detalle</h2>
+              <p className="mt-4 max-w-2xl text-white/90">
                 Materiales premium, mano de obra experta y comunicación transparente para entregar resultados duraderos.
               </p>
             </div>
@@ -115,7 +115,7 @@ export default function PorQue() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold">Metodología de ejecución y control</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Metodología de ejecución y control</h2>
               <p className="mt-4 text-gray-600">
                 Para hacer una verdadera diferencia, seguimos un proceso que protege presupuesto, tiempos y calidad.
               </p>
@@ -189,7 +189,7 @@ export default function PorQue() {
       {/* CLIENTES */}
       <section className="bg-neutral-950 text-white py-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold">Trayectoria con empresas líderes</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white">Trayectoria con empresas líderes</h2>
           <p className="mt-4 text-white/75 max-w-2xl mx-auto">
             Marcas y empresas que han confiado en nuestra ejecución, control y estándares.
           </p>
@@ -220,3 +220,8 @@ export default function PorQue() {
     </main>
   );
 }
+
+
+
+
+

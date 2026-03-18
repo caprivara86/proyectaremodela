@@ -125,7 +125,7 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-5 sm:px-6">
           <div className="max-w-4xl">
-            <div className="inline-flex max-w-full items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-medium leading-5 text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.45)] backdrop-blur-sm sm:text-sm">
+            <div className="inline-flex max-w-full items-center rounded-full border border-white/15 bg-black/50 px-4 py-2 text-[11px] font-medium leading-5 text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.45)] backdrop-blur-sm sm:text-sm">
               CDMX y Estado de México · Proyectos residenciales, comerciales y corporativos
             </div>
 
@@ -146,22 +146,22 @@ export default function Home() {
               </a>
               <a
                 href="/proyectos"
-                className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/20 bg-white/10 px-6 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/15 sm:px-7"
+                className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/20 bg-black/50 px-6 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/15 sm:px-7"
               >
                 Ver proyectos
               </a>
             </div>
 
             <div className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-3 sm:gap-4">
-              <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur-sm sm:p-5">
+              <div className="rounded-2xl border border-white/12 bg-black/50 p-4 backdrop-blur-sm sm:p-5">
                 <div className="text-2xl font-bold text-white sm:text-3xl">300+</div>
                 <p className="mt-1 text-sm leading-6 text-gray-200">Proyectos ejecutados</p>
               </div>
-              <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur-sm sm:p-5">
+              <div className="rounded-2xl border border-white/12 bg-black/50 p-4 backdrop-blur-sm sm:p-5">
                 <div className="text-2xl font-bold text-white sm:text-3xl">850+</div>
                 <p className="mt-1 text-sm leading-6 text-gray-200">Clientes satisfechos</p>
               </div>
-              <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur-sm sm:p-5">
+              <div className="rounded-2xl border border-white/12 bg-black/50 p-4 backdrop-blur-sm sm:p-5">
                 <div className="text-2xl font-bold text-white sm:text-3xl">2010–2026</div>
                 <p className="mt-1 text-sm leading-6 text-gray-200">Experiencia acumulada en ejecución y remodelación</p>
               </div>
@@ -254,8 +254,8 @@ export default function Home() {
                       <h3 className="text-2xl font-semibold tracking-tight text-white">
                         {item.t}
                       </h3>
-                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition group-hover:bg-white/15">
-                        →
+                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-black/50 text-white transition group-hover:bg-white/15">
+                        ?
                       </span>
                     </div>
                     <div className="mt-4 h-px w-full bg-white/15" />
@@ -294,7 +294,7 @@ export default function Home() {
                 <h3 className="mt-4 text-xl font-semibold text-neutral-950">
                   Remodelación residencial
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-neutral-700">
+                <p className="mt-3 text-sm leading-6 text-white/90">
                   Remodelación de casas, departamentos y residencias con enfoque en calidad, control de obra y acabados premium.
                 </p>
               </a>
@@ -309,7 +309,7 @@ export default function Home() {
                 <h3 className="mt-4 text-xl font-semibold text-neutral-950">
                   Remodelación comercial
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-neutral-700">
+                <p className="mt-3 text-sm leading-6 text-white/90">
                   Adecuación de locales, restaurantes, franquicias y espacios de atención al cliente con estándares profesionales.
                 </p>
               </a>
@@ -324,7 +324,7 @@ export default function Home() {
                 <h3 className="mt-4 text-xl font-semibold text-neutral-950">
                   Remodelación corporativa
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-neutral-700">
+                <p className="mt-3 text-sm leading-6 text-white/90">
                   Adecuación de oficinas y espacios empresariales con metodología estructurada, control presupuestal y seguimiento de proyecto.
                 </p>
               </a>
@@ -388,10 +388,10 @@ export default function Home() {
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">
                   Calidad
                 </p>
-                <h3 className="mt-4 text-2xl font-semibold tracking-tight text-neutral-950">
+                <h3 className="mt-4 text-2xl font-semibold tracking-tight text-white">
                   Calidad y excelencia
                 </h3>
-                <p className="mt-4 text-base leading-7 text-neutral-700">
+                <p className="mt-4 text-base leading-7 text-white/90">
                   Materiales confiables, supervisión puntual y mano de obra experta para lograr acabados consistentes y resultados duraderos.
                 </p>
               </div>
@@ -415,7 +415,7 @@ export default function Home() {
                 <h3 className="mt-4 text-2xl font-semibold tracking-tight text-neutral-950">
                   Cumplimiento real
                 </h3>
-                <p className="mt-4 text-base leading-7 text-neutral-700">
+                <p className="mt-4 text-base leading-7 text-white/90">
                   Cronogramas realistas, comunicación transparente y enfoque operativo para entregar con seriedad y menor fricción.
                 </p>
               </div>
@@ -624,7 +624,7 @@ export default function Home() {
                 <div className="mt-8">
                   <a
                     href="/contacto"
-                    className="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-6 py-3 text-white font-semibold transition hover:bg-white/15"
+                    className="inline-flex items-center rounded-full border border-white/15 bg-black/50 px-6 py-3 text-white font-semibold transition hover:bg-white/15"
                   >
                     Cotizar proyecto corporativo
                   </a>
@@ -713,6 +713,9 @@ export default function Home() {
     </main>
   );
 }
+
+
+
 
 
 

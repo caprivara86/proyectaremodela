@@ -94,7 +94,7 @@ export default function BlogPage() {
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">
                   {post.category}
                 </p>
-                <span className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-500 transition group-hover:border-neutral-300 group-hover:text-neutral-700">
+                <span className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-500 transition group-hover:border-neutral-300 group-hover:text-white/90">
                   Leer guía
                 </span>
               </div>

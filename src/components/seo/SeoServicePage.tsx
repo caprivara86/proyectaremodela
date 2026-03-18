@@ -162,7 +162,7 @@ export default function SeoServicePage({
                 <ul className="mt-4 space-y-3">
                   {relatedLinks.map((link) => (
                     <li key={link.href}>
-                      <Link href={link.href} className="text-neutral-700 underline underline-offset-4 hover:text-neutral-900">
+                      <Link href={link.href} className="text-white/90 underline underline-offset-4 hover:text-neutral-900">
                         {link.label}
                       </Link>
                     </li>

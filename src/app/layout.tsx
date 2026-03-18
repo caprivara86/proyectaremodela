@@ -68,6 +68,24 @@ export default function RootLayout({
             gtag('config', 'G-P7JBMXSDTT');
           `}
         </Script>
+        <Script id="whatsapp-tracking" strategy="afterInteractive">
+          {`
+            document.addEventListener('click', function (e) {
+              var target = e.target;
+              if (!(target instanceof Element)) return;
+              var link = target.closest('a[href*="wa.me/"], a[href*="api.whatsapp.com/"]');
+              if (!link) return;
+              if (typeof window.gtag === 'function') {
+                window.gtag('event', 'whatsapp_click', {
+                  event_category: 'engagement',
+                  event_label: link.getAttribute('href') || '',
+                  link_url: link.getAttribute('href') || '',
+                  link_text: (link.textContent || '').trim()
+                });
+              }
+            }, true);
+          `}
+        </Script>
 
         <header
           className="fixed inset-x-0 top-0 z-50 overflow-hidden border-b border-white/10 shadow-[0_10px_40px_rgba(15,23,42,0.25)] bg-neutral-900 bg-center bg-repeat-x transition-all duration-500"
@@ -112,7 +130,7 @@ export default function RootLayout({
                 href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden md:inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/15"
+                className="hidden md:inline-flex items-center rounded-full border border-white/20 bg-black/50 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/15"
               >
                 WhatsApp
               </a>
@@ -191,6 +209,8 @@ export default function RootLayout({
     </html>
   );
 }
+
+
 
 
 

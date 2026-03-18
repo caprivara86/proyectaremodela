@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 const WHATSAPP_PHONE = "525551054340";
 const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotización para una remodelación. ¿Me pueden apoyar?");
@@ -73,7 +73,7 @@ export default function Servicios() {
                 href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex justify-center rounded-md border border-white/30 px-6 py-3 font-semibold text-white hover:bg-white/10 transition"
+                className="inline-flex justify-center rounded-md border border-white/30 px-6 py-3 font-semibold text-white hover:bg-black/50 transition"
               >
                 WhatsApp
               </a>
@@ -114,7 +114,7 @@ export default function Servicios() {
                   </div>
                 </div>
 
-                <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
+                <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-white/90">
                   {s.bullets.map((b) => (
                     <li key={b} className="flex items-start gap-2">
                       <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-neutral-900 text-white text-xs">
@@ -159,7 +159,7 @@ export default function Servicios() {
               href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex justify-center rounded-md border border-white/25 px-6 py-3 font-semibold text-white hover:bg-white/10 transition"
+              className="inline-flex justify-center rounded-md border border-white/25 px-6 py-3 font-semibold text-white hover:bg-black/50 transition"
             >
               WhatsApp
             </a>
@@ -169,3 +169,4 @@ export default function Servicios() {
     </main>
   );
 }
+

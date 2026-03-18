@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
@@ -23,7 +23,7 @@ export default function MobileMenu() {
         aria-label={open ? "Cerrar menú" : "Abrir menú"}
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/15 bg-white/10 text-white shadow-[0_8px_24px_rgba(0,0,0,0.18)] backdrop-blur-sm transition hover:bg-white/15"
+        className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/15 bg-black/50 text-white shadow-[0_8px_24px_rgba(0,0,0,0.18)] backdrop-blur-sm transition hover:bg-white/15"
       >
         <span className="text-2xl leading-none">{open ? "×" : "☰"}</span>
       </button>
@@ -55,3 +55,4 @@ export default function MobileMenu() {
     </div>
   );
 }
+

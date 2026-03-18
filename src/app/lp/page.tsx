@@ -8,7 +8,7 @@ export default function LandingIndex() {
 
         <h1 className="mt-6 text-4xl md:text-5xl font-bold">Landings de Campaña</h1>
 
-        <p className="mt-6 text-lg text-gray-700 max-w-3xl">
+        <p className="mt-6 text-lg text-white/90 max-w-3xl">
           Usa estos ejemplos para validar que la ruta dinámica <code className="px-2 py-1 rounded bg-gray-100">/lp/[slug]</code> captura el slug.
         </p>
 

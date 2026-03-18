@@ -1,4 +1,4 @@
-export default function RemodelacionResidencialPage() {
+﻿export default function RemodelacionResidencialPage() {
   return (
     <main className="bg-transparent text-gray-900">
       <section className="bg-neutral-950 text-white py-24 px-6">
@@ -24,7 +24,7 @@ export default function RemodelacionResidencialPage() {
             </a>
             <a
               href="/proyectos"
-              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-6 py-3.5 font-semibold text-white hover:bg-white/15 transition"
+              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-black/50 px-6 py-3.5 font-semibold text-white hover:bg-white/15 transition"
             >
               Ver proyectos
             </a>
@@ -35,20 +35,20 @@ export default function RemodelacionResidencialPage() {
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
           <div className="rounded-2xl border border-gray-200 p-6">
-            <h2 className="text-xl font-semibold">Planeación de obra</h2>
-            <p className="mt-3 text-gray-600 leading-7">
+            <h2 className="text-xl font-semibold text-white">Planeación de obra</h2>
+            <p className="mt-3 text-white/90 leading-7">
               Definimos alcances, tiempos, materiales y prioridades para ejecutar con orden y evitar desviaciones innecesarias.
             </p>
           </div>
           <div className="rounded-2xl border border-gray-200 p-6">
-            <h2 className="text-xl font-semibold">Supervisión profesional</h2>
-            <p className="mt-3 text-gray-600 leading-7">
+            <h2 className="text-xl font-semibold text-white">Supervisión profesional</h2>
+            <p className="mt-3 text-white/90 leading-7">
               Damos seguimiento puntual al proyecto para mantener control de calidad, avances y cumplimiento.
             </p>
           </div>
           <div className="rounded-2xl border border-gray-200 p-6">
-            <h2 className="text-xl font-semibold">Acabados de alto estándar</h2>
-            <p className="mt-3 text-gray-600 leading-7">
+            <h2 className="text-xl font-semibold text-white">Acabados de alto estándar</h2>
+            <p className="mt-3 text-white/90 leading-7">
               Cuidamos cada detalle para entregar espacios funcionales, estéticos y duraderos.
             </p>
           </div>
@@ -82,3 +82,5 @@ export default function RemodelacionResidencialPage() {
     </main>
   );
 }
+
+

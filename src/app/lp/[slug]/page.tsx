@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import { useParams } from "next/navigation";
@@ -51,7 +51,7 @@ export default function LandingPage() {
 
         <h1 className="mt-6 text-4xl md:text-5xl font-bold">{title}</h1>
 
-        <p className="mt-6 text-lg text-gray-700 max-w-3xl">
+        <p className="mt-6 text-lg text-white/90 max-w-3xl">
           Esta es una plantilla base para campañas. Aquí vamos a personalizar el mensaje
           según el tipo de proyecto (residencial o corporativo), y después conectaremos
           el formulario para capturar leads con UTMs.

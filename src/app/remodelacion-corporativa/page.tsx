@@ -1,4 +1,4 @@
-export default function RemodelacionCorporativaPage() {
+﻿export default function RemodelacionCorporativaPage() {
   return (
     <main className="bg-transparent text-gray-900">
       <section className="bg-neutral-950 text-white py-24 px-6">
@@ -28,7 +28,7 @@ export default function RemodelacionCorporativaPage() {
 
             <a
               href="/proyectos"
-              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-6 py-3.5 font-semibold text-white hover:bg-white/15 transition"
+              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-black/50 px-6 py-3.5 font-semibold text-white hover:bg-white/15 transition"
             >
               Ver proyectos
             </a>
@@ -39,23 +39,23 @@ export default function RemodelacionCorporativaPage() {
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
           <div className="rounded-2xl border border-gray-200 p-6">
-            <h2 className="text-xl font-semibold">Espacios de trabajo eficientes</h2>
-            <p className="mt-3 text-gray-600 leading-7">
+            <h2 className="text-xl font-semibold text-white">Espacios de trabajo eficientes</h2>
+            <p className="mt-3 text-white/90 leading-7">
               Diseñamos y ejecutamos oficinas que favorecen productividad,
               colaboración y flujo operativo.
             </p>
           </div>
 
           <div className="rounded-2xl border border-gray-200 p-6">
-            <h2 className="text-xl font-semibold">Imagen corporativa</h2>
-            <p className="mt-3 text-gray-600 leading-7">
+            <h2 className="text-xl font-semibold text-white">Imagen corporativa</h2>
+            <p className="mt-3 text-white/90 leading-7">
               Adecuamos espacios alineados a identidad de marca y cultura organizacional.
             </p>
           </div>
 
           <div className="rounded-2xl border border-gray-200 p-6">
-            <h2 className="text-xl font-semibold">Control de proyecto</h2>
-            <p className="mt-3 text-gray-600 leading-7">
+            <h2 className="text-xl font-semibold text-white">Control de proyecto</h2>
+            <p className="mt-3 text-white/90 leading-7">
               Ejecutamos con planeación, supervisión técnica y control de presupuesto.
             </p>
           </div>
@@ -92,3 +92,5 @@ export default function RemodelacionCorporativaPage() {
     </main>
   );
 }
+
+

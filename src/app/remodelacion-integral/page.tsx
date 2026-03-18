@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 const WHATSAPP_PHONE = "525551054340";
 const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotización para una remodelación integral. ¿Me pueden apoyar?");
@@ -31,7 +31,7 @@ export default function RemodelacionIntegralPage() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="max-w-4xl">
-            <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-white [text-shadow:0_2px_6px_rgba(0,0,0,0.85)]/80">
+            <p className="inline-flex rounded-full border border-white/15 bg-black/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-white [text-shadow:0_2px_6px_rgba(0,0,0,0.85)]/80">
               Remodelación integral en CDMX y Estado de México
             </p>
 
@@ -56,7 +56,7 @@ export default function RemodelacionIntegralPage() {
                 href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-7 py-4 text-base font-semibold text-white [text-shadow:0_2px_6px_rgba(0,0,0,0.85)] transition hover:bg-white/15"
+                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-black/50 px-7 py-4 text-base font-semibold text-white [text-shadow:0_2px_6px_rgba(0,0,0,0.85)] transition hover:bg-white/15"
               >
                 WhatsApp directo
               </a>
@@ -274,7 +274,7 @@ export default function RemodelacionIntegralPage() {
                 href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-7 py-4 text-base font-semibold text-white [text-shadow:0_2px_6px_rgba(0,0,0,0.85)] transition hover:bg-white/15"
+                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-black/50 px-7 py-4 text-base font-semibold text-white [text-shadow:0_2px_6px_rgba(0,0,0,0.85)] transition hover:bg-white/15"
               >
                 Hablar por WhatsApp
               </a>
@@ -293,6 +293,7 @@ export default function RemodelacionIntegralPage() {
 </main>
   );
 }
+
 
 
 

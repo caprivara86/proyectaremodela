@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -35,13 +35,13 @@ const proyectos = [
 
 export default function ProyectosPage() {
   return (
-    <main className="bg-transparent text-neutral-900">
+    <main className="bg-transparent text-white/90">
       <section className="mx-auto max-w-6xl px-6 py-12 md:px-8 md:py-16">
         <header className="max-w-3xl">
           <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
             Proyectos de remodelación
           </h1>
-          <p className="mt-5 text-lg leading-8 text-neutral-600">
+          <p className="mt-5 text-lg leading-8 text-white/90">
             Conoce algunos proyectos de remodelación ejecutados en CDMX y Estado
             de México con enfoque en calidad, planeación y control de obra.
           </p>
@@ -55,7 +55,7 @@ export default function ProyectosPage() {
               className="block rounded-3xl border border-neutral-200 p-6 hover:border-neutral-400 transition"
             >
               <h2 className="text-xl font-semibold">{p.title}</h2>
-              <p className="mt-2 text-neutral-600">{p.zone}</p>
+              <p className="mt-2 text-white/90">{p.zone}</p>
             </Link>
           ))}
         </div>
@@ -63,3 +63,4 @@ export default function ProyectosPage() {
     </main>
   );
 }
+
