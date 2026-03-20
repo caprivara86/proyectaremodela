@@ -1,32 +1,32 @@
 ﻿import Image from "next/image";
 
 const WHATSAPP_PHONE = "525551054340";
-const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotización para una remodelación. ¿Me pueden apoyar?");
+const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotización para una remodelación. ¿Me pueden apoyar✓");
 
 const services = [
   {
     title: "Remodelación Residencial Premium",
     desc: "Transformamos viviendas de nivel medio y alto con acabados premium, planeación estructurada y supervisión constante.",
     bullets: ["Diagnóstico y alcance", "Presupuesto y cronograma", "Ejecución y acabados", "Entrega y garantía"],
-    icon: "🏡",
+    icon: "",
   },
   {
     title: "Remodelación Comercial / Retail",
     desc: "Adecuación y expansión de negocios, franquicias y conceptos boutique bajo estándares de marca y operación.",
     bullets: ["Lineamientos de marca", "Coordinación de proveedores", "Operación sin fricción", "Control de cambios"],
-    icon: "🏬",
+    icon: "",
   },
   {
     title: "Ejecución Corporativa",
     desc: "Proyectos empresariales con control presupuestal, cronogramas definidos, reporteo y cumplimiento contractual.",
     bullets: ["Control financiero", "Bitácora y reportes", "Supervisión técnica", "Cumplimiento de tiempos"],
-    icon: "🏢",
+    icon: "",
   },
   {
     title: "Mantenimiento Profesional",
     desc: "Mantenimiento preventivo y correctivo para inmuebles corporativos y comerciales con respuesta y seguimiento.",
     bullets: ["Programas preventivos", "Correctivos y urgencias", "Evidencia y cierre", "Atención continua"],
-    icon: "🧰",
+    icon: "",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function Servicios() {
               </a>
 
               <a
-                href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}
+                href={`https://wa.me/${WHATSAPP_PHONE}✓text=${WHATSAPP_TEXT}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex justify-center rounded-md border border-white/30 px-6 py-3 font-semibold text-white hover:bg-black/50 transition"
@@ -87,8 +87,8 @@ export default function Servicios() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold">Soluciones completas</h2>
-              <p className="mt-4 text-gray-600 max-w-2xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Soluciones completas</h2>
+              <p className="mt-4 max-w-2xl text-white/90">
                 Metodología clara, supervisión y control de cambios para entregar calidad predecible.
               </p>
             </div>
@@ -114,7 +114,7 @@ export default function Servicios() {
                   </div>
                 </div>
 
-                <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-white/90">
+                <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-neutral-700">
                   {s.bullets.map((b) => (
                     <li key={b} className="flex items-start gap-2">
                       <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-neutral-900 text-white text-xs">
@@ -130,7 +130,7 @@ export default function Servicios() {
                     href="/contacto"
                     className="inline-flex items-center font-semibold text-blue-700 hover:text-blue-800 transition"
                   >
-                    Solicitar cotización <span className="ml-2">→</span>
+                    Solicitar cotización <span className="ml-2">✓</span>
                   </a>
                 </div>
               </div>
@@ -143,7 +143,7 @@ export default function Servicios() {
       <section className="bg-neutral-950 text-white py-20 px-6">
         <div className="max-w-6xl mx-auto rounded-3xl border border-white/10 bg-white/5 p-10 md:p-12 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <div>
-            <h3 className="text-2xl md:text-3xl font-bold">¿Listo para cotizar tu proyecto?</h3>
+            <h3 className="text-2xl md:text-3xl font-bold">¿Listo para cotizar tu proyecto✓</h3>
             <p className="mt-3 text-white/75 max-w-2xl">
               Compártenos el tipo de servicio, ubicación y tiempos. Te respondemos con una ruta clara de trabajo.
             </p>
@@ -156,7 +156,7 @@ export default function Servicios() {
               Solicitar cotización
             </a>
             <a
-              href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}
+              href={`https://wa.me/${WHATSAPP_PHONE}✓text=${WHATSAPP_TEXT}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex justify-center rounded-md border border-white/25 px-6 py-3 font-semibold text-white hover:bg-black/50 transition"
@@ -169,4 +169,12 @@ export default function Servicios() {
     </main>
   );
 }
+
+
+
+
+
+
+
+
 

@@ -82,8 +82,8 @@ export default function ContactoPage() {
         </div>
 
         <div className="relative max-w-6xl mx-auto px-6 pt-28 pb-16">
-          <div className="max-w-3xl text-white">
-            <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold text-white/90">
+          <div className="max-w-3xl text-neutral-900">
+            <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold text-neutral-700">
               Contacto · CDMX y Estado de México
             </p>
 
@@ -91,7 +91,7 @@ export default function ContactoPage() {
               Solicita tu cotización
             </h1>
 
-            <p className="mt-6 text-lg md:text-xl text-white/80">
+            <p className="mt-6 text-lg md:text-xl text-neutral-900/80">
               Cuéntanos qué quieres construir o remodelar. Te respondemos con una ruta clara: alcance, tiempos y presupuesto estimado.
             </p>
 
@@ -100,14 +100,14 @@ export default function ContactoPage() {
                 href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex justify-center rounded-md bg-green-600 px-6 py-3 font-semibold text-white hover:brightness-95 transition"
+                className="inline-flex justify-center rounded-md bg-green-600 px-6 py-3 font-semibold text-neutral-900 hover:brightness-95 transition"
               >
                 WhatsApp
               </a>
 
               <a
                 href="#form"
-                className="inline-flex justify-center rounded-md border border-white/30 px-6 py-3 font-semibold text-white hover:bg-black/50 transition"
+                className="inline-flex justify-center rounded-md border border-white/30 px-6 py-3 font-semibold text-neutral-900 hover:bg-black/50 transition"
               >
                 Llenar formulario
               </a>
@@ -219,7 +219,7 @@ export default function ContactoPage() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="w-full rounded-xl bg-blue-700 px-6 py-3 font-semibold text-white hover:bg-blue-800 transition disabled:opacity-60"
+                className="w-full rounded-xl bg-blue-700 px-6 py-3 font-semibold text-neutral-900 hover:bg-blue-800 transition disabled:opacity-60"
               >
                 {status === "loading" ? "Enviando…" : "Enviar"}
               </button>
@@ -237,7 +237,7 @@ export default function ContactoPage() {
                 Si prefieres, contáctanos por WhatsApp. Te ayudamos a definir el mejor camino para tu remodelación.
               </p>
 
-              <div className="mt-6 space-y-3 text-white/90">
+              <div className="mt-6 space-y-3 text-neutral-700">
                 <div className="flex items-center justify-between">
                   <span className="font-semibold">Teléfono</span>
                   <span>55 5105 4340</span>
@@ -253,7 +253,7 @@ export default function ContactoPage() {
                   href={`https://wa.me/${WHATSAPP_PHONE}?text=${WHATSAPP_TEXT}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex justify-center rounded-xl bg-green-600 px-6 py-3 font-semibold text-white hover:brightness-95 transition"
+                  className="inline-flex justify-center rounded-xl bg-green-600 px-6 py-3 font-semibold text-neutral-900 hover:brightness-95 transition"
                 >
                   WhatsApp
                 </a>
@@ -268,7 +268,7 @@ export default function ContactoPage() {
 
             <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8 md:p-10">
               <h3 className="text-xl font-semibold">Qué información ayuda para cotizar</h3>
-              <ul className="mt-4 space-y-3 text-white/90">
+              <ul className="mt-4 space-y-3 text-neutral-700">
                 {[
                   "Ubicación del inmueble",
                   "Tipo de proyecto (residencial, corporativo, retail, etc.)",
@@ -277,7 +277,7 @@ export default function ContactoPage() {
                   "Fotos o referencias (si aplica)",
                 ].map((i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-neutral-900 text-white text-xs">
+                    <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-neutral-900 text-neutral-900 text-xs">
                       ✓
                     </span>
                     <span>{i}</span>
@@ -291,4 +291,5 @@ export default function ContactoPage() {
     </main>
   );
 }
+
 
