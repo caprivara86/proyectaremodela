@@ -36,7 +36,7 @@ const posts = [
 
 export default function BlogPage() {
   return (
-    <main className="bg-transparent text-neutral-900">
+    <main className="bg-transparent text-white">
       <section className="border-b border-neutral-200 bg-[radial-gradient(circle_at_top,rgba(120,120,120,0.12),transparent_40%),linear-gradient(to_bottom,#fafafa,#ffffff)]">
         <div className="mx-auto max-w-6xl px-6 py-14 md:px-8 md:py-20">
           <div className="max-w-4xl">
@@ -72,10 +72,10 @@ export default function BlogPage() {
       <section className="mx-auto max-w-6xl px-6 py-12 md:px-8 md:py-16">
         <div className="mb-8 flex items-end justify-between gap-6">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.18em] text-neutral-500">
+            <p className="text-sm font-medium uppercase tracking-[0.18em] text-white">
               Artículos destacados
             </p>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-neutral-950 md:text-3xl">
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-white md:text-3xl">
               Contenido útil para decidir mejor
             </h2>
           </div>
@@ -94,7 +94,7 @@ export default function BlogPage() {
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">
                   {post.category}
                 </p>
-                <span className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-500 transition group-hover:border-neutral-300 group-hover:text-white/90">
+                <span className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-500 transition group-hover:border-neutral-300 group-hover:text-neutral-700">
                   Leer guía
                 </span>
               </div>

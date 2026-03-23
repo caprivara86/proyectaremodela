@@ -34,17 +34,17 @@ export default function RemodelacionCocinaPage() {
       ]}
       faq={[
         {
-          question: "¿Cuánto tarda una remodelación de cocina?",
+          question: "Ã‚¿Cuánto tarda una remodelación de cocina?",
           answer:
             "Depende del alcance, materiales y trabajos involucrados, pero una cocina bien planificada puede ejecutarse en etapas con control de tiempos y supervisión continua.",
         },
         {
-          question: "¿Se puede remodelar sin cambiar toda la distribución?",
+          question: "Ã‚¿Se puede remodelar sin cambiar toda la distribución?",
           answer:
             "Sí. Muchas cocinas se optimizan mejorando acabados, mobiliario, iluminación y funcionalidad sin intervenir toda la estructura.",
         },
         {
-          question: "¿Atienden proyectos en CDMX y Estado de México?",
+          question: "Ã‚¿Atienden proyectos en CDMX y Estado de México?",
           answer:
             "Sí. Proyecta atiende remodelaciones residenciales, comerciales y corporativas en CDMX y Estado de México.",
         },
@@ -52,3 +52,5 @@ export default function RemodelacionCocinaPage() {
     />
   );
 }
+
+

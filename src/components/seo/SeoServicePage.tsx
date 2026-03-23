@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 type SeoServicePageProps = {
   title: string;
@@ -21,7 +21,7 @@ export default function SeoServicePage({
   parentLabel,
   parentHref,
   serviceType,
-  areaServed = "Ciudad de México y Estado de México",
+  areaServed = "Ciudad de MÃ©xico y Estado de MÃ©xico",
   relatedLinks = [],
   faq = [],
 }: SeoServicePageProps) {
@@ -33,7 +33,7 @@ export default function SeoServicePage({
     areaServed,
     provider: {
       "@type": "LocalBusiness",
-      name: "Proyecta Remodelación y mantenimiento",
+      name: "Proyecta RemodelaciÃ³n y mantenimiento",
       url: "https://www.proyectaremodela.com",
       telephone: "+52 55 5105 4340",
     },
@@ -81,7 +81,7 @@ export default function SeoServicePage({
       : null;
 
   return (
-    <main className="bg-transparent text-neutral-900">
+    <main className="bg-transparent text-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {faqSchema ? (
@@ -89,30 +89,30 @@ export default function SeoServicePage({
       ) : null}
 
       <section className="mx-auto max-w-6xl px-6 py-12 md:px-8 md:py-16">
-        <nav aria-label="Breadcrumb" className="mb-6 text-sm text-neutral-500">
+        <nav aria-label="Breadcrumb" className="mb-6 text-sm text-white">
           <ol className="flex flex-wrap items-center gap-2">
             <li>
-              <Link href="/" className="hover:text-neutral-900">
+              <Link href="/" className="hover:text-white">
                 Inicio
               </Link>
             </li>
             <li>/</li>
             <li>
-              <Link href={parentHref} className="hover:text-neutral-900">
+              <Link href={parentHref} className="hover:text-white">
                 {parentLabel}
               </Link>
             </li>
             <li>/</li>
-            <li className="text-neutral-900">{h1}</li>
+            <li className="text-white">{h1}</li>
           </ol>
         </nav>
 
         <header className="max-w-3xl">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-white">
             Servicio especializado
           </p>
           <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">{h1}</h1>
-          <p className="mt-5 text-lg leading-8 text-neutral-600">{description}</p>
+          <p className="mt-5 text-lg leading-8 text-white">{description}</p>
         </header>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
@@ -120,9 +120,9 @@ export default function SeoServicePage({
             {h2.map((heading) => (
               <section key={heading} className="rounded-3xl border border-neutral-200 p-6">
                 <h2 className="text-2xl font-semibold tracking-tight">{heading}</h2>
-                <p className="mt-3 leading-7 text-neutral-600">
-                  En Proyecta desarrollamos {serviceType.toLowerCase()} con planeación, ejecución, supervisión y
-                  control de calidad para entregar resultados funcionales, estéticos y duraderos.
+                <p className="mt-3 leading-7 text-white">
+                  En Proyecta desarrollamos {serviceType.toLowerCase()} con planeaciÃ³n, ejecuciÃ³n, supervisiÃ³n y
+                  control de calidad para entregar resultados funcionales, estÃ©ticos y duraderos.
                 </p>
               </section>
             ))}
@@ -134,7 +134,7 @@ export default function SeoServicePage({
                   {faq.map((item) => (
                     <div key={item.question}>
                       <h3 className="text-lg font-medium">{item.question}</h3>
-                      <p className="mt-2 leading-7 text-neutral-600">{item.answer}</p>
+                      <p className="mt-2 leading-7 text-white">{item.answer}</p>
                     </div>
                   ))}
                 </div>
@@ -145,8 +145,8 @@ export default function SeoServicePage({
           <aside className="space-y-6">
             <div className="rounded-3xl border border-neutral-200 p-6">
               <h2 className="text-xl font-semibold">Solicita una propuesta</h2>
-              <p className="mt-3 leading-7 text-neutral-600">
-                Cuéntanos tu proyecto y te ayudamos a planear una remodelación profesional en CDMX y Estado de México.
+              <p className="mt-3 leading-7 text-white">
+                CuÃ©ntanos tu proyecto y te ayudamos a planear una remodelaciÃ³n profesional en CDMX y Estado de MÃ©xico.
               </p>
               <Link
                 href="/contacto"
@@ -162,7 +162,7 @@ export default function SeoServicePage({
                 <ul className="mt-4 space-y-3">
                   {relatedLinks.map((link) => (
                     <li key={link.href}>
-                      <Link href={link.href} className="text-white/90 underline underline-offset-4 hover:text-neutral-900">
+                      <Link href={link.href} className="text-white/90 underline underline-offset-4 hover:text-white">
                         {link.label}
                       </Link>
                     </li>
@@ -176,3 +176,4 @@ export default function SeoServicePage({
     </main>
   );
 }
+
