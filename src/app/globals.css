@@ -41,7 +41,6 @@ body {
 }
 /* /REVEAL_ANIMATIONS */
 
-
 /* steel reflection animation */
 @keyframes steelLight {
   0% {
@@ -70,7 +69,6 @@ body {
   pointer-events: none;
 }
 
-/* mobile steel reflection tuning */
 @media (max-width: 768px) {
   .steel-light {
     width: 70px;
@@ -79,7 +77,6 @@ body {
     opacity: 0.8;
   }
 }
-
 
 /* WhatsApp pulse animation */
 @keyframes whatsappPulse {
@@ -102,7 +99,6 @@ body {
 .whatsapp-pulse {
   animation: whatsappPulse 2.6s infinite;
 }
-
 
 /* premium-surfaces-start */
 @layer utilities {
@@ -129,7 +125,6 @@ body {
 }
 /* premium-surfaces-end */
 
-
 /* fixed-site-background-start */
 html, body {
   min-height: 100%;
@@ -142,21 +137,15 @@ body {
 
 body::before {
   content: "";
-  position: fixed;
+  position: absolute;
   inset: 0;
   z-index: -2;
-  background-image:
-    linear-gradient(180deg, rgba(2,6,23,.72) 0%, rgba(2,6,23,.58) 45%, rgba(2,6,23,.78) 100%),
-    url("/projects/residenciales/residencial1.jpeg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: linear-gradient(180deg, rgba(2,6,23,.92) 0%, rgba(2,6,23,.88) 45%, rgba(2,6,23,.96) 100%);
 }
 
 body::after {
   content: "";
-  position: fixed;
+  position: absolute;
   inset: 0;
   z-index: -1;
   background:
@@ -165,7 +154,3 @@ body::after {
   pointer-events: none;
 }
 /* fixed-site-background-end */
-
-
-
-

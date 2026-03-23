@@ -288,13 +288,13 @@ export default function Home() {
                 href="/remodelacion-residencial"
                 className="group rounded-[24px] border border-neutral-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-neutral-300 hover:shadow-[0_18px_40px_rgba(15,23,42,0.10)]"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/80">
                   Residencial
                 </p>
                 <h3 className="mt-4 text-xl font-semibold text-neutral-950">
                   Remodelación residencial
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-white/90">
+                <p className="mt-3 text-sm leading-6 text-neutral-900">
                   Remodelación de casas, departamentos y residencias con enfoque en calidad, control de obra y acabados premium.
                 </p>
               </a>
@@ -309,7 +309,7 @@ export default function Home() {
                 <h3 className="mt-4 text-xl font-semibold text-neutral-950">
                   Remodelación comercial
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-white/90">
+                <p className="mt-3 text-sm leading-6 text-neutral-900">
                   Adecuación de locales, restaurantes, franquicias y espacios de atención al cliente con estándares profesionales.
                 </p>
               </a>
@@ -324,7 +324,7 @@ export default function Home() {
                 <h3 className="mt-4 text-xl font-semibold text-neutral-950">
                   Remodelación corporativa
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-white/90">
+                <p className="mt-3 text-sm leading-6 text-neutral-900">
                   Adecuación de oficinas y espacios empresariales con metodología estructurada, control presupuestal y seguimiento de proyecto.
                 </p>
               </a>
@@ -348,13 +348,13 @@ export default function Home() {
 
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               <a href="/blog/costo-remodelar-cocina-cdmx" className="rounded-2xl border border-neutral-200 p-5 transition hover:-translate-y-1 hover:shadow-md">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">Costo</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Costo</p>
                 <h3 className="mt-3 text-xl font-semibold text-white">Cuánto cuesta remodelar una cocina en CDMX</h3>
                 <p className="mt-3 text-sm leading-6 text-neutral-200">Factores, materiales y decisiones que influyen en el presupuesto.</p>
               </a>
 
               <a href="/remodelacion-residencial/cocina" className="rounded-2xl border border-neutral-200 p-5 transition hover:-translate-y-1 hover:shadow-md">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">Servicio</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Servicio</p>
                 <h3 className="mt-3 text-xl font-semibold text-white">Remodelación de cocina</h3>
                 <p className="mt-3 text-sm leading-6 text-neutral-200">Diseño, ejecución y control de obra para cocinas funcionales y duraderas.</p>
               </a>
@@ -388,10 +388,10 @@ export default function Home() {
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">
                   Calidad
                 </p>
-                <h3 className="mt-4 text-2xl font-semibold tracking-tight text-white">
+                <h3 className="mt-4 text-2xl font-semibold tracking-tight text-neutral-950">
                   Calidad y excelencia
                 </h3>
-                <p className="mt-4 text-base leading-7 text-white/90">
+                <p className="mt-4 text-base leading-7 text-neutral-900">
                   Materiales confiables, supervisión puntual y mano de obra experta para lograr acabados consistentes y resultados duraderos.
                 </p>
               </div>
@@ -415,7 +415,7 @@ export default function Home() {
                 <h3 className="mt-4 text-2xl font-semibold tracking-tight text-neutral-950">
                   Cumplimiento real
                 </h3>
-                <p className="mt-4 text-base leading-7 text-white/90">
+                <p className="mt-4 text-base leading-7 text-neutral-900">
                   Cronogramas realistas, comunicación transparente y enfoque operativo para entregar con seriedad y menor fricción.
                 </p>
               </div>
@@ -592,7 +592,7 @@ export default function Home() {
 
             <div className="mt-12 grid gap-6 md:grid-cols-2">
               <div className="rounded-[28px] panel-glass-light p-8 transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(15,23,42,0.10)]">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/80">
                   Residencial
                 </p>
                 <h3 className="mt-4 text-2xl font-semibold tracking-tight text-white">
@@ -612,7 +612,7 @@ export default function Home() {
               </div>
 
               <div className="rounded-[28px] panel-glass-dark p-8 text-white transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_rgba(15,23,42,0.22)]">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-600">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/80">
                   Comercial / Corporativo
                 </p>
                 <h3 className="mt-4 text-2xl font-semibold tracking-tight">
@@ -713,6 +713,12 @@ export default function Home() {
     </main>
   );
 }
+
+
+
+
+
+
 
 
 
