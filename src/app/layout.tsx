@@ -4,7 +4,7 @@ import Image from "next/image";
 import MobileMenu from "../components/MobileMenu";
 import CookieBanner from "@/components/CookieBanner";
 
-const WHATSAPP_PHONE = "525551054340";
+const WHATSAPP_PHONE = "525543547776";
 const WHATSAPP_TEXT = encodeURIComponent("Hola, quiero una cotización para una remodelación. ¿Me pueden apoyar?");
 
 export const metadata = {
@@ -120,7 +120,7 @@ export default function RootLayout({
 
             <div className="flex items-center gap-2 sm:gap-3">
               <a
-                href="tel:+525551054340"
+                href="tel:+525543547776"
                 className="inline-flex flex-1 justify-center items-center whitespace-nowrap text-sm font-semibold text-white transition hover:text-blue-300 mr-10 sm:mr-6"
               >
                 55 5105 4340
@@ -168,7 +168,7 @@ export default function RootLayout({
             <div className="space-y-3">
               <h3 className="font-semibold text-white">Contacto</h3>
               <p>CDMX y Estado de México</p>
-              <a href="tel:+525551054340" className="hover:text-white transition">
+              <a href="tel:+525543547776" className="hover:text-white transition">
                 55 5105 4340
               </a>
               <a href="mailto:contacto@proyectaremodela.com" className="block hover:text-white transition">
@@ -181,7 +181,7 @@ export default function RootLayout({
               <a href="/privacidad" className="block hover:text-white transition">
                 Aviso de privacidad
               </a>
-              <a href="https://wa.me/525551054340" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition">
+              <a href="https://wa.me/525543547776" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition">
                 WhatsApp
               </a>
             </div>
@@ -209,6 +209,8 @@ export default function RootLayout({
     </html>
   );
 }
+
+
 
 
 
